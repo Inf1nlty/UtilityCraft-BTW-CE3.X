@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "moreblocks",
+  "version": "${version}",
+  "name": "More Blocks",
+  "description": "Adds a book that can store a limited amount of XP,\nfor Better Than Wolves Community Edition.",
+  "authors": [
+    "Inf1nlty"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Inf1nlty/MoreBlocks-BTW",
+    "sources": "https://github.com/Inf1nlty/MoreBlocks-BTW"
+  },
+  "license": "MIT",
+  "icon": "assets/moreblocks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+    ],
+    "btw:addon": [
+      "btw.community.moreblocks.MoreBlocksAddon"
+    ]
+  },
+  "custom": {
+    "btw:addon_prefix": "MB"
+  },
+  "mixins": [
+    "moreblocks.mixins.json"
+  ],
+  "accessWidener" : "moreblocks.accessWidener",
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "minecraft": "1.6.4"
+  }
+}

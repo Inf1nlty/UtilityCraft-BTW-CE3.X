@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.inf1nlty.moreblocks.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"render.TileEntityRendererMixin"
+	],
+	"client": [
+		"client.MixinNetClientHandler",
+		"render.ChestItemRenderHelperMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

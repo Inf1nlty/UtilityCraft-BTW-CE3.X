@@ -1,0 +1,4 @@
+tile.SteelChest.name=锻钢箱子
+item.soulforged_steel_sheet.name=锻钢板
+container.steelChest=锻钢箱子
+container.inventory=物品栏
