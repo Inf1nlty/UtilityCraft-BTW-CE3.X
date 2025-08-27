@@ -75,12 +75,11 @@ public class ContainerSteelChest extends Container {
             result = stack.copy();
 
             int chestSlots = chest.getSizeInventory();
-            int playerInvStart = chestSlots;
-            int hotbarStart = playerInvStart + 27;
+            int hotbarStart = chestSlots + 27;
             int end = hotbarStart + 9;
 
             if (slotIdx < chestSlots){
-                if (!mergeItemStack(stack, playerInvStart, end, true)) return null;
+                if (!mergeItemStack(stack, chestSlots, end, true)) return null;
             } else {
                 if (!mergeItemStack(stack, 0, chestSlots, false)) return null;
             }

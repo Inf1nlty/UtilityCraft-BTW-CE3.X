@@ -27,7 +27,7 @@ public final class SteelChestNet {
             @Override
             public void handleCustomPacket(Packet250CustomPayload packet, EntityPlayer player) {
                 if (packet == null || packet.data == null) return;
-                if (!player.worldObj.isRemote) return; // 只在客户端处理
+                if (!player.worldObj.isRemote) return;
                 handleClient(packet, (EntityClientPlayerMP) player);
             }
 

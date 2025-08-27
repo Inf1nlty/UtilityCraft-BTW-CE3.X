@@ -1,4 +1,39 @@
 tile.SteelChest.name=Forged Steel Chest
+tile.white_concrete.name=White Concrete
+tile.orange_concrete.name=Orange Concrete
+tile.magenta_concrete.name=Magenta Concrete
+tile.light_blue_concrete.name=Light Blue Concrete
+tile.yellow_concrete.name=Yellow Concrete
+tile.lime_concrete.name=Lime Concrete
+tile.pink_concrete.name=Pink Concrete
+tile.gray_concrete.name=Gray Concrete
+tile.light_gray_concrete.name=Light Gray Concrete
+tile.cyan_concrete.name=Cyan Concrete
+tile.purple_concrete.name=Purple Concrete
+tile.blue_concrete.name=Blue Concrete
+tile.brown_concrete.name=Brown Concrete
+tile.green_concrete.name=Green Concrete
+tile.red_concrete.name=Red Concrete
+tile.black_concrete.name=Black Concrete
+
+tile.white_concrete_powder.name=White Cement
+tile.orange_concrete_powder.name=Orange Cement
+tile.magenta_concrete_powder.name=Magenta Cement
+tile.light_blue_concrete_powder.name=Light Blue Cement
+tile.yellow_concrete_powder.name=Yellow Cement
+tile.lime_concrete_powder.name=Lime Cement
+tile.pink_concrete_powder.name=Pink Cement
+tile.gray_concrete_powder.name=Gray Cement
+tile.light_gray_concrete_powder.name=Light Gray Cement
+tile.cyan_concrete_powder.name=Cyan Cement
+tile.purple_concrete_powder.name=Purple Cement
+tile.blue_concrete_powder.name=Blue Cement
+tile.brown_concrete_powder.name=Brown Cement
+tile.green_concrete_powder.name=Green Cement
+tile.red_concrete_powder.name=Red Cement
+tile.black_concrete_powder.name=Black Cement
+
 item.soulforged_steel_sheet.name=Soulforged Steel Sheet
-container.steelChest=Forged steel Chest
+
+container.steelChest=Soulforged steel Chest
 container.inventory=Inventory

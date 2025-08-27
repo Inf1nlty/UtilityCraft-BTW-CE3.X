@@ -3,7 +3,7 @@
   "id": "moreblocks",
   "version": "${version}",
   "name": "More Blocks",
-  "description": "Adds a book that can store a limited amount of XP,\nfor Better Than Wolves Community Edition.",
+  "description": "Add a series of new blocks for BTW-CE-3X",
   "authors": [
     "Inf1nlty"
   ],

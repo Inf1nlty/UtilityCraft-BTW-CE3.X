@@ -7,6 +7,6 @@ public class MBItems {
 
     public static void initMBItems() {
         soulforged_steel_sheet = new Item(23334)
-                .setCreativeTab(CreativeTabs.tabMaterials).setTextureName("soulforged_steel_sheet").setUnlocalizedName("soulforged_steel_sheet");
+                .setCreativeTab(CreativeTabs.tabMaterials).setTextureName("moreblocks:soulforged_steel_sheet").setUnlocalizedName("soulforged_steel_sheet");
     }
 }

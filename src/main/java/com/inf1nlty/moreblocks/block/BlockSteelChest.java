@@ -13,14 +13,14 @@ import java.util.Random;
 
 public class BlockSteelChest extends BlockContainer {
     private final Random random = new Random();
-    public static final int CUSTOM_WINDOW_TYPE = 40;
+    public static final int CUSTOM_WINDOW_TYPE = 41;
     public final int chestType;
 
     public BlockSteelChest(int id, int type) {
         super(id, Material.iron);
         this.chestType = type;
         setCreativeTab(CreativeTabs.tabDecorations);
-        setHardness(10f);
+        setHardness(50f);
         setResistance(2000f);
         setAxesEffectiveOn();
         setBuoyant();

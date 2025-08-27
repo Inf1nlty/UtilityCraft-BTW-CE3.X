@@ -1,39 +1,28 @@
-# XP Tome for Better Than Wolves Community Edition (3.0.x)
+# MoreBlocks for Better Than Wolves Community Edition (3.0.x)
 
-This mod adds a special XP Tome book that allows you to store and retrieve your experience points in Better Than Wolves Community Edition.  
-Perfect for keeping your XP safe or moving it between locations!
+This mod adds a variety of new blocks to [Better Than Wolves Community Edition 3.x], expanding gameplay and building possibilities.
 
 ---
 
 ## Features
 
-- **XP Tome** item that can store up to 30 levels of XP (825 XP points).
-- Deposit or withdraw XP at any time.
-- New `/exp` command to check your current XP.
-- Right-click a Dragon Vessel with an empty XP Tome to permanently increase the vessel’s XP capacity by 1000.
-- **Crafting:** To craft an XP Tome, place an Ancient Manuscript onto a Dragon Vessel, then throw a Soul Urn onto the vessel.
+- **Forged Steel Chest (133 slots)**
+    - 19x7 grid, providing a total of 133 inventory slots for massive storage.
+    - Blast resistance equal to obsidian—keeps your items safe from explosions.
+    - **Crafting:** On a Soulforge, combine 12 Steel Sheets (added by this mod and crafted from 6 Soulforged Steel Ingots) and 4 Chests to craft 4 Forged Steel Chests at once.
 
-### Note
-
-- If you break and replace a Dragon Vessel after upgrading its capacity, the increased capacity will *not* persist.
-- However, the upgrade will be correctly saved and restored after reloading the world (by exiting and re-entering the game).
+- Additional new blocks
 
 ---
 
-## Requirements
+## Notes
 
-- Minecraft with [Better Than Wolves Community Edition 3.x](https://github.com/BetterWithMods/BetterThanWolves-CommunityEdition)
+- The Forged Steel Chest has extremely high blast resistance, making it ideal for storing valuable items.
 
 ---
 
-## How to Install
+## Installation
 
-1. [Download the latest release (.jar)](https://github.com/Inf1nlty/XPTome-BTW/releases/latest)
+1. [Download the latest release (.jar)](https://github.com/Inf1nlty/MoreBlocks-BTW-CE3.X/releases/latest)
 2. Place it into your `mods` folder
 3. Start Minecraft with BTW Community Edition
-
----
-
-## Credits
-
-- Ported from the original mod by [bl4ckscor3/XP-Tome](https://github.com/bl4ckscor3/XP-Tome)
