@@ -1,4 +1,4 @@
-tile.SteelChest.name=融魂钢箱子
+tile.SteelChest.name=熔魂钢箱子
 
 tile.white_concrete.name=白色混凝土
 tile.orange_concrete.name=橙色混凝土
@@ -34,7 +34,7 @@ tile.green_concrete_powder.name=绿色水泥
 tile.red_concrete_powder.name=红色水泥
 tile.black_concrete_powder.name=黑色水泥
 
-item.soulforged_steel_sheet.name=融魂钢板
+item.soulforged_steel_sheet.name=熔魂钢板
 
-container.steelChest=融魂钢箱子
+container.steelChest=熔魂钢箱子
 container.inventory=物品栏
