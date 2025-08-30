@@ -1,11 +1,11 @@
 package com.inf1nlty.moreblocks.block.tileentity;
 
 import btw.util.sounds.BTWSoundManager;
-import com.inf1nlty.moreblocks.block.BlockSteelChest;
-import com.inf1nlty.moreblocks.inventory.ContainerSteelChest;
+import com.inf1nlty.moreblocks.block.BlockSteelLocker;
+import com.inf1nlty.moreblocks.inventory.ContainerSteelLocker;
 import net.minecraft.src.*;
 
-public class TileEntitySteelChest extends TileEntity implements IInventory {
+public class TileEntitySteelLocker extends TileEntity implements IInventory {
 
     public static final int SLOT_COLS = 19;
     public static final int SLOT_ROWS = 7;
@@ -59,7 +59,7 @@ public class TileEntitySteelChest extends TileEntity implements IInventory {
 
     @Override
     public String getInvName() {
-        return isInvNameLocalized() ? customName : "container.steelChest";
+        return isInvNameLocalized() ? customName : "container.steelLocker";
     }
 
     @Override
@@ -139,7 +139,7 @@ public class TileEntitySteelChest extends TileEntity implements IInventory {
                             xCoord - range, yCoord - range, zCoord - range,
                             xCoord + 1 + range, yCoord + 1 + range, zCoord + 1 + range))) {
                 EntityPlayer p = (EntityPlayer)o;
-                if (p.openContainer instanceof ContainerSteelChest cont) {
+                if (p.openContainer instanceof ContainerSteelLocker cont) {
                     if (cont.getChestInventory() == this) ++numUsingPlayers;
                 }
             }
@@ -191,7 +191,7 @@ public class TileEntitySteelChest extends TileEntity implements IInventory {
     }
 
     public void closeChest() {
-        if (getBlockType() instanceof BlockSteelChest) {
+        if (getBlockType() instanceof BlockSteelLocker) {
             --numUsingPlayers;
             worldObj.addBlockEvent(xCoord,yCoord,zCoord,getBlockType().blockID,1,numUsingPlayers);
             worldObj.notifyBlocksOfNeighborChange(xCoord,yCoord,zCoord,getBlockType().blockID);
@@ -201,7 +201,7 @@ public class TileEntitySteelChest extends TileEntity implements IInventory {
 
     public int getChestType() {
         if (cachedChestType == -1) {
-            if (getBlockType() instanceof BlockSteelChest b) cachedChestType = b.chestType;
+            if (getBlockType() instanceof BlockSteelLocker b) cachedChestType = b.chestType;
             else cachedChestType = 0;
         }
         return cachedChestType;

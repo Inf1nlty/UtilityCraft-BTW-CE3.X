@@ -1,4 +1,4 @@
-tile.SteelChest.name=熔魂钢箱子
+tile.SteelLocker.name=熔魂钢箱子
 
 tile.white_concrete.name=白色混凝土
 tile.orange_concrete.name=橙色混凝土
@@ -17,24 +17,26 @@ tile.green_concrete.name=绿色混凝土
 tile.red_concrete.name=红色混凝土
 tile.black_concrete.name=黑色混凝土
 
-tile.white_concrete_powder.name=白色水泥
-tile.orange_concrete_powder.name=橙色水泥
-tile.magenta_concrete_powder.name=洋红色水泥
-tile.light_blue_concrete_powder.name=淡蓝色水泥
-tile.yellow_concrete_powder.name=黄色水泥
-tile.lime_concrete_powder.name=浅绿色水泥
-tile.pink_concrete_powder.name=粉色水泥
-tile.gray_concrete_powder.name=灰色水泥
-tile.light_gray_concrete_powder.name=浅灰色水泥
-tile.cyan_concrete_powder.name=青色水泥
-tile.purple_concrete_powder.name=紫色水泥
-tile.blue_concrete_powder.name=蓝色水泥
-tile.brown_concrete_powder.name=棕色水泥
-tile.green_concrete_powder.name=绿色水泥
-tile.red_concrete_powder.name=红色水泥
-tile.black_concrete_powder.name=黑色水泥
+tile.white_cement.name=白色水泥
+tile.orange_cement.name=橙色水泥
+tile.magenta_cement.name=洋红色水泥
+tile.light_blue_cement.name=淡蓝色水泥
+tile.yellow_cement.name=黄色水泥
+tile.lime_cement.name=浅绿色水泥
+tile.pink_cement.name=粉色水泥
+tile.gray_cement.name=灰色水泥
+tile.light_gray_cement.name=浅灰色水泥
+tile.cyan_cement.name=青色水泥
+tile.purple_cement.name=紫色水泥
+tile.blue_cement.name=蓝色水泥
+tile.brown_cement.name=棕色水泥
+tile.green_cement.name=绿色水泥
+tile.red_cement.name=红色水泥
+tile.black_cement.name=黑色水泥
 
 item.soulforged_steel_sheet.name=熔魂钢板
 
-container.steelChest=熔魂钢箱子
+container.steelLocker=熔魂钢箱子
 container.inventory=物品栏
+
+emi.colored_cement_aging.tooltip=放置后等待一天自动转换为混凝土

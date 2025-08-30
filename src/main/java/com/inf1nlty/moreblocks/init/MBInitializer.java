@@ -7,9 +7,6 @@ import com.inf1nlty.moreblocks.block.MBBlocks;
 import com.inf1nlty.moreblocks.item.MBItems;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.Block;
-
-import java.util.Arrays;
 
 public class MBInitializer {
 
@@ -28,8 +25,8 @@ public class MBInitializer {
         for (int i = 0; i < 16; i++) {
             ItemStack cementBucket = new ItemStack(BTWItems.cementBucket, 1, 0);
             ItemStack dye = new ItemStack(Item.dyePowder, 1, dyeMeta[i]);
-            ItemStack powder = new ItemStack(MBBlocks.concretePowder, 64, i);
-            RecipeManager.addShapelessRecipe(powder, new Object[]{ cementBucket, dye });
+            ItemStack cement = new ItemStack(MBBlocks.coloredCement, 64, i);
+            RecipeManager.addShapelessRecipe(cement, new Object[]{ cementBucket, dye });
         }
     }
 

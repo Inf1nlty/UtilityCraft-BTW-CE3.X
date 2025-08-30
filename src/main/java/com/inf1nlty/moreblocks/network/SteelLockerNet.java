@@ -2,18 +2,18 @@ package com.inf1nlty.moreblocks.network;
 
 import btw.BTWAddon;
 import btw.network.packet.handler.CustomPacketHandler;
-import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelChest;
-import com.inf1nlty.moreblocks.inventory.ContainerSteelChest;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;
+import com.inf1nlty.moreblocks.inventory.ContainerSteelLocker;
 import net.minecraft.src.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
-public final class SteelChestNet {
+public final class SteelLockerNet {
 
     public static String CHANNEL;
 
-    private SteelChestNet(){}
+    private SteelLockerNet(){}
 
     public static void register(BTWAddon addon){
 
@@ -49,11 +49,11 @@ public final class SteelChestNet {
                 if ( (windowId & 0xFF) != (player.openContainer.windowId & 0xFF) ) return;
 
                 TileEntity te = player.worldObj.getBlockTileEntity(x,y,z);
-                if (!(te instanceof TileEntitySteelChest chest)) return;
+                if (!(te instanceof TileEntitySteelLocker chest)) return;
 
                 Container oldC = player.openContainer;
                 IInventory oldInv = null;
-                if (oldC instanceof ContainerSteelChest scOld) {
+                if (oldC instanceof ContainerSteelLocker scOld) {
                     oldInv = scOld.getChestInventory();
                 }
 
@@ -69,7 +69,7 @@ public final class SteelChestNet {
 
                 int wid = player.openContainer.windowId;
 
-                ContainerSteelChest newC = new ContainerSteelChest(player.inventory, chest);
+                ContainerSteelLocker newC = new ContainerSteelLocker(player.inventory, chest);
                 newC.windowId = wid;
 
                 if (Minecraft.getMinecraft().currentScreen instanceof GuiContainer gui){

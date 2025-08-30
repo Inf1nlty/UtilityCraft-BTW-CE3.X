@@ -2,14 +2,14 @@ package com.inf1nlty.moreblocks.item;
 
 import net.minecraft.src.*;
 
-public class ItemConcretePowder extends ItemBlock {
+public class ItemCement extends ItemBlock {
     private static final String[] colorNames = {
             "white","orange","magenta","light_blue",
             "yellow","lime","pink","gray","light_gray",
             "cyan","purple","blue","brown","green","red","black"
     };
 
-    public ItemConcretePowder(int id) {
+    public ItemCement(int id) {
         super(id);
         setHasSubtypes(true);
     }
@@ -23,6 +23,6 @@ public class ItemConcretePowder extends ItemBlock {
     public String getUnlocalizedName(ItemStack stack) {
         int meta = stack.getItemDamage();
         if (meta < 0 || meta >= colorNames.length) meta = 0;
-        return "tile." + colorNames[meta] + "_concrete_powder";
+        return "tile." + colorNames[meta] + "_cement";
     }
 }

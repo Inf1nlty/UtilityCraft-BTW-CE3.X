@@ -1,8 +1,7 @@
 package com.inf1nlty.moreblocks.block;
 
 import btw.block.BTWBlocks;
-import com.inf1nlty.moreblocks.block.tileentity.TileEntityConcretePowder;
-import btw.block.blocks.FallingBlock;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntityCement;
 import net.minecraft.src.*;
 
 import java.util.ArrayList;
@@ -10,10 +9,10 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Concrete powder block, falls like sand, solidifies near water into concrete.
+ * Cement block, falls like sand, solidifies near water into concrete.
  * Supports 16 color variants via metadata.
  */
-public class BlockConcretePowder extends BlockContainer {
+public class BlockCement extends BlockContainer {
     private final Block concreteBlock;
     private Icon[] icons;
     private static final String[] colorNames = {
@@ -22,13 +21,13 @@ public class BlockConcretePowder extends BlockContainer {
             "cyan", "purple", "blue", "brown", "green", "red", "black"
     };
 
-    public BlockConcretePowder(int id, Block concreteBlock) {
+    public BlockCement(int id, Block concreteBlock) {
         super(id, Material.sand);
         this.setHardness(0.5F);
         this.setResistance(0.5F);
         this.setStepSound(BTWBlocks.dirtStepSound);
-        this.setUnlocalizedName("concretePowder");
-        this.setTextureName("concretePowder");
+        this.setUnlocalizedName("cement");
+        this.setTextureName("cement");
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.concreteBlock = concreteBlock;
         this.setTickRandomly(true);
@@ -66,7 +65,7 @@ public class BlockConcretePowder extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World world) {
-        TileEntityConcretePowder te = new TileEntityConcretePowder();
+        TileEntityCement te = new TileEntityCement();
         te.concreteBlockID = concreteBlock.blockID;
         return te;
     }
@@ -86,12 +85,12 @@ public class BlockConcretePowder extends BlockContainer {
         if (!world.isRemote) {
             int meta = world.getBlockMetadata(x, y, z);
             TileEntity te = world.getBlockTileEntity(x, y, z);
-            if (!(te instanceof TileEntityConcretePowder)) {
-                TileEntityConcretePowder powderTE = new TileEntityConcretePowder();
-                powderTE.concreteBlockID = concreteBlock.blockID;
-                world.setBlockTileEntity(x, y, z, powderTE);
+            if (!(te instanceof TileEntityCement)) {
+                TileEntityCement cenmentTE = new TileEntityCement();
+                cenmentTE.concreteBlockID = concreteBlock.blockID;
+                world.setBlockTileEntity(x, y, z, cenmentTE);
             } else {
-                ((TileEntityConcretePowder)te).concreteBlockID = concreteBlock.blockID;
+                ((TileEntityCement)te).concreteBlockID = concreteBlock.blockID;
             }
         }
     }
@@ -105,7 +104,7 @@ public class BlockConcretePowder extends BlockContainer {
     public void updateTick(World world, int x, int y, int z, Random rand) {
         super.updateTick(world, x, y, z, rand);
         TileEntity te = world.getBlockTileEntity(x, y, z);
-        if (te instanceof TileEntityConcretePowder) {
+        if (te instanceof TileEntityCement) {
             te.updateEntity();
         }
         this.checkForFall(world, x, y, z);
@@ -117,6 +116,11 @@ public class BlockConcretePowder extends BlockContainer {
         for (int i = 0; i < 16; i++) {
             list.add(new ItemStack(this, 1, i));
         }
+    }
+
+    @Override
+    public int tickRate(World world) {
+        return 2;
     }
 
     public void scheduleCheckForFall(World world, int x, int y, int z) {
@@ -144,7 +148,7 @@ public class BlockConcretePowder extends BlockContainer {
     public void registerIcons(IconRegister reg) {
         icons = new Icon[16];
         for (int i = 0; i < 16; i++) {
-            icons[i] = reg.registerIcon("moreblocks:" + colorNames[i] + "_concrete_powder");
+            icons[i] = reg.registerIcon("moreblocks:" + colorNames[i] + "_cement");
         }
     }
 

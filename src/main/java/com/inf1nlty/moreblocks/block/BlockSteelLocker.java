@@ -1,8 +1,8 @@
 package com.inf1nlty.moreblocks.block;
 
-import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelChest;
-import com.inf1nlty.moreblocks.inventory.ContainerSteelChest;
-import com.inf1nlty.moreblocks.network.SteelChestNet;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;
+import com.inf1nlty.moreblocks.inventory.ContainerSteelLocker;
+import com.inf1nlty.moreblocks.network.SteelLockerNet;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
@@ -11,12 +11,12 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.util.Random;
 
-public class BlockSteelChest extends BlockContainer {
+public class BlockSteelLocker extends BlockContainer {
     private final Random random = new Random();
     public static final int CUSTOM_WINDOW_TYPE = 41;
     public final int chestType;
 
-    public BlockSteelChest(int id, int type) {
+    public BlockSteelLocker(int id, int type) {
         super(id, Material.iron);
         this.chestType = type;
         setCreativeTab(CreativeTabs.tabDecorations);
@@ -26,7 +26,7 @@ public class BlockSteelChest extends BlockContainer {
         setBuoyant();
         initBlockBounds(0.0625F,0,0.0625F,0.9375F,0.875F,0.9375F);
         setStepSound(soundMetalFootstep);
-        setUnlocalizedName("SteelChest");
+        setUnlocalizedName("SteelLocker");
     }
 
     @Override public boolean isOpaqueCube(){ return false; }
@@ -64,7 +64,7 @@ public class BlockSteelChest extends BlockContainer {
 
         if (stack.hasDisplayName()){
             TileEntity te = world.getBlockTileEntity(x,y,z);
-            if (te instanceof TileEntitySteelChest chest){
+            if (te instanceof TileEntitySteelLocker chest){
                 chest.setChestGuiName(stack.getDisplayName());
             }
         }
@@ -73,13 +73,13 @@ public class BlockSteelChest extends BlockContainer {
     @Override
     public boolean onBlockActivated(World world,int x,int y,int z,EntityPlayer player,int side,float hitX,float hitY,float hitZ){
         TileEntity te = world.getBlockTileEntity(x,y,z);
-        if (!(te instanceof TileEntitySteelChest chest)) return false;
+        if (!(te instanceof TileEntitySteelLocker chest)) return false;
         if (world.isRemote) return true;
 
         EntityPlayerMP mp = (EntityPlayerMP)player;
         int windowId = mp.incrementAndGetWindowID();
 
-        ContainerSteelChest container = new ContainerSteelChest(mp.inventory, chest);
+        ContainerSteelLocker container = new ContainerSteelLocker(mp.inventory, chest);
         container.windowId = windowId;
 
         mp.playerNetServerHandler.sendPacketToPlayer(
@@ -109,14 +109,14 @@ public class BlockSteelChest extends BlockContainer {
             dos.writeInt(y);
             dos.writeInt(z);
             Packet250CustomPayload pkt =
-                    new Packet250CustomPayload(SteelChestNet.CHANNEL, bos.toByteArray());
+                    new Packet250CustomPayload(SteelLockerNet.CHANNEL, bos.toByteArray());
             mp.playerNetServerHandler.sendPacketToPlayer(pkt);
         } catch (Exception ignored){}
     }
 
     @Override
     public void breakBlock(World world,int x,int y,int z,int p5,int p6){
-        TileEntitySteelChest te = (TileEntitySteelChest)world.getBlockTileEntity(x,y,z);
+        TileEntitySteelLocker te = (TileEntitySteelLocker)world.getBlockTileEntity(x,y,z);
         if (te != null){
             for (int i=0;i<te.getSizeInventory();i++){
                 ItemStack st = te.getStackInSlot(i);
@@ -148,14 +148,14 @@ public class BlockSteelChest extends BlockContainer {
 
     public IInventory getInventory(World world,int x,int y,int z){
         TileEntity tile = world.getBlockTileEntity(x,y,z);
-        if (!(tile instanceof TileEntitySteelChest chest)) return null;
+        if (!(tile instanceof TileEntitySteelLocker chest)) return null;
         if (world.isBlockRedstoneConductor(x,y+1,z)) return null;
         if (isOcelotBlockingChest(world,x,y,z)) return null;
         return chest;
     }
 
     @Override
-    public TileEntity createNewTileEntity(World w){ return new TileEntitySteelChest(); }
+    public TileEntity createNewTileEntity(World w){ return new TileEntitySteelLocker(); }
 
     private static boolean isOcelotBlockingChest(World w,int x,int y,int z){
         for (Object o: w.getEntitiesWithinAABB(EntityOcelot.class,
@@ -179,7 +179,7 @@ public class BlockSteelChest extends BlockContainer {
     public int isProvidingWeakPower(IBlockAccess acc,int x,int y,int z,int side){
         if (!canProvidePower()) return 0;
         TileEntity te = acc.getBlockTileEntity(x,y,z);
-        if (te instanceof TileEntitySteelChest chest){
+        if (te instanceof TileEntitySteelLocker chest){
             return MathHelper.clamp_int(chest.numUsingPlayers,0,15);
         }
         return 0;
@@ -195,7 +195,7 @@ public class BlockSteelChest extends BlockContainer {
 
     @Override
     public void registerIcons(IconRegister reg){
-        this.blockIcon = reg.registerIcon("moreblocks:chestSteel_particle");
+        this.blockIcon = reg.registerIcon("moreblocks:lockerSteel_particle");
     }
 
     @Override

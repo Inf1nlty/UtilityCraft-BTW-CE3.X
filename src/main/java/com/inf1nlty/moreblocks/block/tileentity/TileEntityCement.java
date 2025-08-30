@@ -6,13 +6,13 @@ import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.Packet;
 import net.minecraft.src.Packet132TileEntityData;
 
-public class TileEntityConcretePowder extends TileEntity implements TileEntityDataPacketHandler {
+public class TileEntityCement extends TileEntity implements TileEntityDataPacketHandler {
     private static final int TIME_TO_CONVERT = 24000;
     private int convertCounter = 0;
     private boolean isConverting = true;
     public int concreteBlockID = -1;
 
-    public TileEntityConcretePowder() {}
+    public TileEntityCement() {}
 
     @Override
     public void updateEntity() {
@@ -20,7 +20,7 @@ public class TileEntityConcretePowder extends TileEntity implements TileEntityDa
             if (isConverting) {
                 ++convertCounter;
                 if (convertCounter == 1) {
-                    worldObj.markBlockForUpdate(xCoord, yCoord, zCoord); // 网络包同步
+                    worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
                 }
                 if (convertCounter >= TIME_TO_CONVERT) {
                     int meta = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
@@ -69,26 +69,26 @@ public class TileEntityConcretePowder extends TileEntity implements TileEntityDa
 
 
     /**
-     * 16色meta转RGB（0~1），你可以替换为你喜欢的色表
+     * Converts 16-color meta to RGB (0-1).
      */
     public static float[] getMetaColor(int meta) {
         return switch (meta) {
-            case 0 -> new float[]{1.0F, 1.0F, 1.0F};    // 白
-            case 1 -> new float[]{1.0F, 0.5F, 0.0F};    // 橙
-            case 2 -> new float[]{1.0F, 0.0F, 1.0F};    // 品红
-            case 3 -> new float[]{0.5F, 0.75F, 1.0F};   // 浅蓝
-            case 4 -> new float[]{1.0F, 1.0F, 0.0F};    // 黄
-            case 5 -> new float[]{0.5F, 1.0F, 0.0F};    // 黄绿色
-            case 6 -> new float[]{1.0F, 0.75F, 0.8F};   // 粉
-            case 7 -> new float[]{0.3F, 0.3F, 0.3F};    // 深灰
-            case 8 -> new float[]{0.7F, 0.7F, 0.7F};    // 浅灰
-            case 9 -> new float[]{0.0F, 0.75F, 0.75F};  // 青色
-            case 10 -> new float[]{0.5F, 0.0F, 0.75F};   // 紫
-            case 11 -> new float[]{0.0F, 0.0F, 1.0F};    // 蓝
-            case 12 -> new float[]{0.4F, 0.2F, 0.0F};    // 棕
-            case 13 -> new float[]{0.0F, 0.5F, 0.0F};    // 绿
-            case 14 -> new float[]{1.0F, 0.0F, 0.0F};    // 红
-            case 15 -> new float[]{0.0F, 0.0F, 0.0F};    // 黑
+            case 0 -> new float[]{1.0F, 1.0F, 1.0F};    // White
+            case 1 -> new float[]{1.0F, 0.5F, 0.0F};    // Orange
+            case 2 -> new float[]{1.0F, 0.0F, 1.0F};    // Magenta
+            case 3 -> new float[]{0.5F, 0.75F, 1.0F};   // Light Blue
+            case 4 -> new float[]{1.0F, 1.0F, 0.0F};    // Yellow
+            case 5 -> new float[]{0.5F, 1.0F, 0.0F};    // Lime
+            case 6 -> new float[]{1.0F, 0.75F, 0.8F};   // Pink
+            case 7 -> new float[]{0.3F, 0.3F, 0.3F};    // Gray
+            case 8 -> new float[]{0.7F, 0.7F, 0.7F};    // Light Gray
+            case 9 -> new float[]{0.0F, 0.75F, 0.75F};  // Cyan
+            case 10 -> new float[]{0.5F, 0.0F, 0.75F};  // Purple
+            case 11 -> new float[]{0.0F, 0.0F, 1.0F};   // Blue
+            case 12 -> new float[]{0.4F, 0.2F, 0.0F};   // Brown
+            case 13 -> new float[]{0.0F, 0.5F, 0.0F};   // Green
+            case 14 -> new float[]{1.0F, 0.0F, 0.0F};   // Red
+            case 15 -> new float[]{0.0F, 0.0F, 0.0F};   // Black
             default -> new float[]{1.0F, 1.0F, 1.0F};
         };
     }

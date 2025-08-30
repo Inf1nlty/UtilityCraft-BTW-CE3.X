@@ -1,28 +1,28 @@
 package com.inf1nlty.moreblocks.block;
 
-import com.inf1nlty.moreblocks.block.tileentity.TileEntityConcretePowder;
-import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelChest;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntityCement;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;
 import com.inf1nlty.moreblocks.item.ItemConcrete;
-import com.inf1nlty.moreblocks.item.ItemConcretePowder;
+import com.inf1nlty.moreblocks.item.ItemCement;
 import net.minecraft.src.*;
 
 public class MBBlocks {
-    public static BlockSteelChest steelChest;
-    public static BlockConcretePowder concretePowder;
+    public static BlockSteelLocker steelChest;
+    public static BlockCement coloredCement;
     public static BlockConcrete concrete;
 
     public static void initMBBlocks() {
 
-        steelChest = (BlockSteelChest) new BlockSteelChest(3100,1).setTextureName("chestSteel");
+        steelChest = (BlockSteelLocker) new BlockSteelLocker(3100,1).setTextureName("chestSteel");
         Item.itemsList[steelChest.blockID] = new ItemBlock(steelChest.blockID - 256);
-        TileEntity.addMapping(TileEntitySteelChest.class, "SteelChest");
+        TileEntity.addMapping(TileEntitySteelLocker.class, "SteelChest");
 
         concrete = new BlockConcrete(3500);
         Item.itemsList[concrete.blockID] = new ItemConcrete(concrete.blockID - 256);
 
-        concretePowder = new BlockConcretePowder(3501, concrete);
-        Item.itemsList[concretePowder.blockID] = new ItemConcretePowder(concretePowder.blockID - 256);
-        TileEntity.addMapping(TileEntityConcretePowder.class, "ConcretePowder");
+        coloredCement = new BlockCement(3501, concrete);
+        Item.itemsList[coloredCement.blockID] = new ItemCement(coloredCement.blockID - 256);
+        TileEntity.addMapping(TileEntityCement.class, "coloredCement");
 
     }
 }

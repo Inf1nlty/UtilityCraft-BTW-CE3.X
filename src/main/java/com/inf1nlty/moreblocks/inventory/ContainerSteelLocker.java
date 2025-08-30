@@ -1,9 +1,9 @@
 package com.inf1nlty.moreblocks.inventory;
 
-import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelChest;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;
 import net.minecraft.src.*;
 
-public class ContainerSteelChest extends Container {
+public class ContainerSteelLocker extends Container {
 
     private final IInventory chest;
 
@@ -13,15 +13,15 @@ public class ContainerSteelChest extends Container {
     private static final int PLAYER_INV_Y = 158;
     private static final int HOTBAR_GAP = 4;
 
-    public ContainerSteelChest(InventoryPlayer playerInv, IInventory chest) {
+    public ContainerSteelLocker(InventoryPlayer playerInv, IInventory chest) {
         this.chest = chest;
 
         int chestSlots = chest.getSizeInventory();
-        int cols = (chestSlots == TileEntitySteelChest.SLOT_TOTAL)
-                ? TileEntitySteelChest.SLOT_COLS
+        int cols = (chestSlots == TileEntitySteelLocker.SLOT_TOTAL)
+                ? TileEntitySteelLocker.SLOT_COLS
                 : 9;
-        int rows = (chestSlots == TileEntitySteelChest.SLOT_TOTAL)
-                ? TileEntitySteelChest.SLOT_ROWS
+        int rows = (chestSlots == TileEntitySteelLocker.SLOT_TOTAL)
+                ? TileEntitySteelLocker.SLOT_ROWS
                 : (chestSlots + cols - 1) / cols;
 
         int idx = 0;
@@ -61,7 +61,7 @@ public class ContainerSteelChest extends Container {
     @Override
     public void onContainerClosed(EntityPlayer player){
         super.onContainerClosed(player);
-        if (!player.worldObj.isRemote && chest instanceof TileEntitySteelChest te){
+        if (!player.worldObj.isRemote && chest instanceof TileEntitySteelLocker te){
             te.closeChest();
         }
     }

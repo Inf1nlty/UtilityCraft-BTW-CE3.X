@@ -5,7 +5,7 @@ import btw.AddonHandler;
 import com.inf1nlty.moreblocks.block.MBBlocks;
 import com.inf1nlty.moreblocks.init.MBInitializer;
 import com.inf1nlty.moreblocks.item.MBItems;
-import com.inf1nlty.moreblocks.network.SteelChestNet;
+import com.inf1nlty.moreblocks.network.SteelLockerNet;
 
 public class MoreBlocksAddon extends BTWAddon {
     @Override
@@ -15,6 +15,6 @@ public class MoreBlocksAddon extends BTWAddon {
         MBBlocks.initMBBlocks();
         MBInitializer.initMBRecipes();
 
-        SteelChestNet.register(this);
+        SteelLockerNet.register(this);
     }
 }

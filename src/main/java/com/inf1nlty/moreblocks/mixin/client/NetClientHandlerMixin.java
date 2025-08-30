@@ -1,7 +1,7 @@
 package com.inf1nlty.moreblocks.mixin.client;
 
-import com.inf1nlty.moreblocks.block.BlockSteelChest;
-import com.inf1nlty.moreblocks.client.gui.GuiSteelChest;
+import com.inf1nlty.moreblocks.block.BlockSteelLocker;
+import com.inf1nlty.moreblocks.client.gui.GuiSteelLocker;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -9,11 +9,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(NetClientHandler.class)
-public abstract class MixinNetClientHandler {
+public abstract class NetClientHandlerMixin {
 
     @Inject(method = "handleOpenWindow", at = @At("HEAD"), cancellable = true)
     private void moreblocks$handleOpenWindow(Packet100OpenWindow packet, CallbackInfo ci) {
-        if (packet.inventoryType != BlockSteelChest.CUSTOM_WINDOW_TYPE) return;
+        if (packet.inventoryType != BlockSteelLocker.CUSTOM_WINDOW_TYPE) return;
 
         Minecraft mc = Minecraft.getMinecraft();
         EntityClientPlayerMP player = mc.thePlayer;
@@ -33,7 +33,7 @@ public abstract class MixinNetClientHandler {
             fake = new InventoryBasic("SteelChest", false, 133);
         }
 
-        GuiSteelChest gui = new GuiSteelChest(player.inventory, fake);
+        GuiSteelLocker gui = new GuiSteelLocker(player.inventory, fake);
         mc.displayGuiScreen(gui);
 
         if (player.openContainer != null) {

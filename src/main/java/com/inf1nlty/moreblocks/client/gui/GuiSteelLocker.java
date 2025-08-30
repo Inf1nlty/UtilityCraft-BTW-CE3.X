@@ -1,12 +1,12 @@
 package com.inf1nlty.moreblocks.client.gui;
 
-import com.inf1nlty.moreblocks.inventory.ContainerSteelChest;
+import com.inf1nlty.moreblocks.inventory.ContainerSteelLocker;
 import net.minecraft.src.*;
 import org.lwjgl.opengl.GL11;
 
-public class GuiSteelChest extends GuiContainer {
+public class GuiSteelLocker extends GuiContainer {
 
-    private static final ResourceLocation TEX = new ResourceLocation("moreblocks:textures/gui/steel_chest_gui.png");
+    private static final ResourceLocation TEX = new ResourceLocation("moreblocks:textures/gui/steel_locker_gui.png");
 
     private static final int GUI_WIDTH = 356;
     private static final int GUI_HEIGHT = 240;
@@ -21,8 +21,8 @@ public class GuiSteelChest extends GuiContainer {
 
     private final IInventory inv;
 
-    public GuiSteelChest(InventoryPlayer playerInv, IInventory inv) {
-        super(new ContainerSteelChest(playerInv, inv));
+    public GuiSteelLocker(InventoryPlayer playerInv, IInventory inv) {
+        super(new ContainerSteelLocker(playerInv, inv));
         this.inv = inv;
         this.xSize = GUI_WIDTH;
         this.ySize = GUI_HEIGHT;

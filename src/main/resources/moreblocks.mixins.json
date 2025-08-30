@@ -4,11 +4,11 @@
   "package": "com.inf1nlty.moreblocks.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "render.TileEntityRendererMixin"
   ],
   "client": [
-    "client.MixinNetClientHandler",
-    "render.ChestItemRenderHelperMixin"
+    "client.NetClientHandlerMixin",
+    "render.ChestItemRenderHelperMixin",
+    "render.TileEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

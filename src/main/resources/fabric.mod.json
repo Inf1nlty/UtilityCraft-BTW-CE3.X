@@ -19,6 +19,9 @@
     ],
     "btw:addon": [
       "btw.community.moreblocks.MoreBlocksAddon"
+    ],
+    "emi": [
+      "com.inf1nlty.moreblocks.emi.MBEmiPlugin"
     ]
   },
   "custom": {

@@ -1,6 +1,6 @@
 package com.inf1nlty.moreblocks.render;
 
-import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelChest;
+import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
@@ -9,21 +9,21 @@ import org.lwjgl.opengl.GL12;
 
 @Environment(value= EnvType.CLIENT)
 
-public class TileEntitySteelChestRenderer extends TileEntitySpecialRenderer {
-    private static final ResourceLocation RES_TRAPPED = new ResourceLocation("moreblocks:textures/blocks/chestSteel.png");
-    private static final ResourceLocation RES_NORMAL = new ResourceLocation("moreblocks:textures/blocks/chestSteel.png");
+public class TileEntitySteelLockerRenderer extends TileEntitySpecialRenderer {
+    private static final ResourceLocation RES_TRAPPED = new ResourceLocation("moreblocks:textures/blocks/lockerSteel.png");
+    private static final ResourceLocation RES_NORMAL = new ResourceLocation("moreblocks:textures/blocks/lockerSteel.png");
 
     private final ModelChest chestModel = new ModelChest();
 
     @Override
     public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float partialTicks) {
-        if (!(tileEntity instanceof TileEntitySteelChest)) {
+        if (!(tileEntity instanceof TileEntitySteelLocker)) {
             return;
         }
-        renderChest((TileEntitySteelChest) tileEntity, x, y, z, partialTicks);
+        renderChest((TileEntitySteelLocker) tileEntity, x, y, z, partialTicks);
     }
 
-    private void renderChest(TileEntitySteelChest chest, double x, double y, double z, float partialTicks) {
+    private void renderChest(TileEntitySteelLocker chest, double x, double y, double z, float partialTicks) {
 
         float lidProgress = chest.prevLidAngle + (chest.lidAngle - chest.prevLidAngle) * partialTicks;
         lidProgress = 1.0f - lidProgress;
