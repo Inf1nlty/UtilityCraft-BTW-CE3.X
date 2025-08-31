@@ -76,3 +76,17 @@ tile.colored_cement_bucket_block_brown.name=棕色水泥桶
 tile.colored_cement_bucket_block_green.name=绿色水泥桶
 tile.colored_cement_bucket_block_red.name=红色水泥桶
 tile.colored_cement_bucket_block_black.name=黑色水泥桶
+
+tile.obsidian_slab.name=黑曜石台阶
+tile.moreblocks:obsidian_stairs.name=黑曜石楼梯
+tile.moreblocks:obsidian_trapdoor.name=黑曜石活板门
+
+tile.obsidian_decorative.siding.name=黑曜石半板
+tile.obsidian_decorative.corner.name=黑曜石边角
+tile.obsidian_decorative.bench.name=黑曜石凳子
+tile.obsidian_decorative.fence.name=黑曜石围墙
+
+tile.obsidian_moulding_decorative.moulding.name=黑曜石条
+tile.obsidian_moulding_decorative.column.name=黑曜石柱子
+tile.obsidian_moulding_decorative.pedestal.name=黑曜石基座
+tile.obsidian_moulding_decorative.table.name=黑曜石桌子

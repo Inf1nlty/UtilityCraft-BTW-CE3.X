@@ -7,6 +7,7 @@ import net.minecraft.src.Material;
  * Custom material used for colored cement "fluid-like" blocks.
  */
 public class ColoredCementMaterial extends Material {
+
     public ColoredCementMaterial(MapColor mapColor) {
         super(mapColor);
         setReplaceable();

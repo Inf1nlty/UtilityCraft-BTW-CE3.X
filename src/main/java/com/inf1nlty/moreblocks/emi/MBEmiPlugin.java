@@ -8,6 +8,7 @@ import emi.dev.emi.emi.api.recipe.EmiWorldInteractionRecipe;
 import net.minecraft.src.Item;
 
 public class MBEmiPlugin implements EmiPlugin {
+
     @Override
     public void register(EmiRegistry registry) {
         if (MBBlocks.coloredCement == null || MBBlocks.concrete == null || MoreBlocksItems.colored_cement_bucket == null) {

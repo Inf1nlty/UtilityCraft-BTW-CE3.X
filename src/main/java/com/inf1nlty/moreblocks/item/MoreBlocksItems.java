@@ -3,6 +3,7 @@ package com.inf1nlty.moreblocks.item;
 import net.minecraft.src.*;
 
 public class MoreBlocksItems {
+
     public static Item soulforged_steel_sheet;
     public static Item colored_cement_bucket;
 

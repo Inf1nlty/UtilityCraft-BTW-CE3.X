@@ -76,3 +76,17 @@ tile.colored_cement_bucket_block_brown.name=Brown Cement Bucket
 tile.colored_cement_bucket_block_green.name=Green Cement Bucket
 tile.colored_cement_bucket_block_red.name=Red Cement Bucket
 tile.colored_cement_bucket_block_black.name=Black Cement Bucket
+
+tile.obsidian_slab.name=Obsidian Slab
+tile.moreblocks:obsidian_stairs.name=Obsidian Stairs
+tile.moreblocks:obsidian_trapdoor.name=Obsidian Trapdoor
+
+tile.obsidian_decorative.siding.name=Obsidian Siding
+tile.obsidian_decorative.corner.name=Obsidian Corner
+tile.obsidian_decorative.bench.name=Obsidian Bench
+tile.obsidian_decorative.fence.name=Obsidian Wall
+
+tile.obsidian_moulding_decorative.moulding.name=Obsidian Moulding
+tile.obsidian_moulding_decorative.column.name=Obsidian Column
+tile.obsidian_moulding_decorative.pedestal.name=Obsidian Pedestal
+tile.obsidian_moulding_decorative.table.name=Obsidian Table
