@@ -1,0 +1,92 @@
+tile.extendedcraft:SteelLocker.name=Soulforged Steel Chest
+
+tile.white_concrete.name=White Concrete
+tile.orange_concrete.name=Orange Concrete
+tile.magenta_concrete.name=Magenta Concrete
+tile.light_blue_concrete.name=Light Blue Concrete
+tile.yellow_concrete.name=Yellow Concrete
+tile.lime_concrete.name=Lime Concrete
+tile.pink_concrete.name=Pink Concrete
+tile.gray_concrete.name=Gray Concrete
+tile.light_gray_concrete.name=Light Gray Concrete
+tile.cyan_concrete.name=Cyan Concrete
+tile.purple_concrete.name=Purple Concrete
+tile.blue_concrete.name=Blue Concrete
+tile.brown_concrete.name=Brown Concrete
+tile.green_concrete.name=Green Concrete
+tile.red_concrete.name=Red Concrete
+tile.black_concrete.name=Black Concrete
+
+tile.colored_cement_white.name=White Cement
+tile.colored_cement_orange.name=Orange Cement
+tile.colored_cement_magenta.name=Magenta Cement
+tile.colored_cement_light_blue.name=Light Blue Cement
+tile.colored_cement_yellow.name=Yellow Cement
+tile.colored_cement_lime.name=Lime Cement
+tile.colored_cement_pink.name=Pink Cement
+tile.colored_cement_gray.name=Gray Cement
+tile.colored_cement_light_gray.name=Light Gray Cement
+tile.colored_cement_cyan.name=Cyan Cement
+tile.colored_cement_purple.name=Purple Cement
+tile.colored_cement_blue.name=Blue Cement
+tile.colored_cement_brown.name=Brown Cement
+tile.colored_cement_green.name=Green Cement
+tile.colored_cement_red.name=Red Cement
+tile.colored_cement_black.name=Black Cement
+
+item.soulforged_steel_sheet.name=Soulforged Steel Sheet
+
+container.steelLocker=Soulforged steel Chest
+container.inventory=Inventory
+
+emi.colored_cement_bucket.right_click.tooltip=Right-click to pour out wet cement from the bucket.
+emi.colored_cement_bucket.piston.tooltip=Use a piston to push out wet cement from the bucket.
+emi.colored_cement.aging.tooltip=Wet cement will harden into concrete over time.
+
+item.colored_cement_bucket_white.name=White Cement Bucket
+item.colored_cement_bucket_orange.name=Orange Cement Bucket
+item.colored_cement_bucket_magenta.name=Magenta Cement Bucket
+item.colored_cement_bucket_light_blue.name=Light Blue Cement Bucket
+item.colored_cement_bucket_yellow.name=Yellow Cement Bucket
+item.colored_cement_bucket_lime.name=Lime Cement Bucket
+item.colored_cement_bucket_pink.name=Pink Cement Bucket
+item.colored_cement_bucket_gray.name=Gray Cement Bucket
+item.colored_cement_bucket_light_gray.name=Light Gray Cement Bucket
+item.colored_cement_bucket_cyan.name=Cyan Cement Bucket
+item.colored_cement_bucket_purple.name=Purple Cement Bucket
+item.colored_cement_bucket_blue.name=Blue Cement Bucket
+item.colored_cement_bucket_brown.name=Brown Cement Bucket
+item.colored_cement_bucket_green.name=Green Cement Bucket
+item.colored_cement_bucket_red.name=Red Cement Bucket
+item.colored_cement_bucket_black.name=Black Cement Bucket
+
+tile.colored_cement_bucket_block_white.name=White Cement Bucket
+tile.colored_cement_bucket_block_orange.name=Orange Cement Bucket
+tile.colored_cement_bucket_block_magenta.name=Magenta Cement Bucket
+tile.colored_cement_bucket_block_light_blue.name=Light Blue Cement Bucket
+tile.colored_cement_bucket_block_yellow.name=Yellow Cement Bucket
+tile.colored_cement_bucket_block_lime.name=Lime Cement Bucket
+tile.colored_cement_bucket_block_pink.name=Pink Cement Bucket
+tile.colored_cement_bucket_block_gray.name=Gray Cement Bucket
+tile.colored_cement_bucket_block_light_gray.name=Light Gray Cement Bucket
+tile.colored_cement_bucket_block_cyan.name=Cyan Cement Bucket
+tile.colored_cement_bucket_block_purple.name=Purple Cement Bucket
+tile.colored_cement_bucket_block_blue.name=Blue Cement Bucket
+tile.colored_cement_bucket_block_brown.name=Brown Cement Bucket
+tile.colored_cement_bucket_block_green.name=Green Cement Bucket
+tile.colored_cement_bucket_block_red.name=Red Cement Bucket
+tile.colored_cement_bucket_block_black.name=Black Cement Bucket
+
+tile.obsidian_slab.name=Obsidian Slab
+tile.extendedcraft:obsidian_stairs.name=Obsidian Stairs
+tile.extendedcraft:obsidian_trapdoor.name=Obsidian Trapdoor
+
+tile.obsidian_decorative.siding.name=Obsidian Siding
+tile.obsidian_decorative.corner.name=Obsidian Corner
+tile.obsidian_decorative.bench.name=Obsidian Bench
+tile.obsidian_decorative.fence.name=Obsidian Wall
+
+tile.obsidian_moulding_decorative.moulding.name=Obsidian Moulding
+tile.obsidian_moulding_decorative.column.name=Obsidian Column
+tile.obsidian_moulding_decorative.pedestal.name=Obsidian Pedestal
+tile.obsidian_moulding_decorative.table.name=Obsidian Table

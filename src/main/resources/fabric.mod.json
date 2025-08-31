@@ -1,36 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "moreblocks",
+  "id": "extendedcraft",
   "version": "${version}",
-  "name": "More Blocks",
-  "description": "Add a series of new blocks for BTW-CE-3X",
+  "name": "ExtendedCraft",
+  "description": "Add a series of new items to BTW-CE-3.X",
   "authors": [
     "Inf1nlty"
   ],
   "contact": {
-    "homepage": "https://github.com/Inf1nlty/MoreBlocks-BTW",
-    "sources": "https://github.com/Inf1nlty/MoreBlocks-BTW"
+    "homepage": "https://github.com/Inf1nlty/ExtendedCraft-BTW",
+    "sources": "https://github.com/Inf1nlty/ExtendedCraft-BTW"
   },
   "license": "MIT",
-  "icon": "assets/moreblocks/icon.png",
+  "icon": "assets/extendedcraft/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
     ],
     "btw:addon": [
-      "btw.community.moreblocks.MoreBlocksAddon"
+      "btw.community.extendedcraft.ExtendedCraftAddon"
     ],
     "emi": [
-      "com.inf1nlty.moreblocks.emi.MBEmiPlugin"
+      "com.inf1nlty.extendedcraft.emi.ECEmiPlugin"
     ]
   },
   "custom": {
-    "btw:addon_prefix": "MB"
+    "btw:addon_prefix": "EC"
   },
   "mixins": [
-    "moreblocks.mixins.json"
+    "extendedcraft.mixins.json"
   ],
-  "accessWidener" : "moreblocks.accessWidener",
+  "accessWidener" : "extendedcraft.accessWidener",
   "depends": {
     "fabricloader": ">=0.14.19",
     "minecraft": "1.6.4"
