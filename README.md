@@ -1,4 +1,4 @@
-# MoreBlocks for Better Than Wolves Community Edition (3.0.x)
+# ExtendedCraft for Better Than Wolves Community Edition (3.0.x)
 
 This mod adds a variety of new blocks to [Better Than Wolves Community Edition 3.x], expanding gameplay and building possibilities.
 
@@ -23,6 +23,6 @@ This mod adds a variety of new blocks to [Better Than Wolves Community Edition 3
 
 ## Installation
 
-1. [Download the latest release (.jar)](https://github.com/Inf1nlty/MoreBlocks-BTW-CE3.X/releases/latest)
+1. [Download the latest release (.jar)](https://github.com/Inf1nlty/ExtendedCraft-BTW-CE3.X/releases/latest)
 2. Place it into your `mods` folder
 3. Start Minecraft with BTW Community Edition
