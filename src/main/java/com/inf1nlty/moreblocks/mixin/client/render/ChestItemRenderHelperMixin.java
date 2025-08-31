@@ -1,4 +1,4 @@
-package com.inf1nlty.moreblocks.mixin.render;
+package com.inf1nlty.moreblocks.mixin.client.render;
 
 import com.inf1nlty.moreblocks.block.MBBlocks;
 import com.inf1nlty.moreblocks.block.tileentity.TileEntitySteelLocker;

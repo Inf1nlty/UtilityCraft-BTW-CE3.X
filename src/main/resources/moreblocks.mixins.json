@@ -6,9 +6,11 @@
   "mixins": [
   ],
   "client": [
+    "MinecraftMixin",
     "client.NetClientHandlerMixin",
-    "render.ChestItemRenderHelperMixin",
-    "render.TileEntityRendererMixin"
+    "client.render.ChestItemRenderHelperMixin",
+    "client.render.TileEntityRendererMixin",
+    "client.render.PrimitiveAABBWithBenefitsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

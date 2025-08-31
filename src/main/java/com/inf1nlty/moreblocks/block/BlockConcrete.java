@@ -11,9 +11,8 @@ public class BlockConcrete extends Block {
     private Icon[] icons;
 
     private static final String[] colorNames = {
-            "white","orange","magenta","light_blue",
-            "yellow","lime","pink","gray","light_gray",
-            "cyan","purple","blue","brown","green","red","black"
+            "white","orange","magenta","light_blue","yellow","lime","pink","gray",
+            "light_gray","cyan","purple","blue","brown","green","red","black"
     };
 
     public BlockConcrete(int id) {
