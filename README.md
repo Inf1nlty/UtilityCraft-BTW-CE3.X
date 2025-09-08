@@ -1,4 +1,4 @@
-# ExtendedCraft for Better Than Wolves Community Edition (3.0.x)
+# Utility Craft for Better Than Wolves Community Edition (3.0.x)
 
 This mod adds a variety of new blocks to [Better Than Wolves Community Edition 3.x], expanding gameplay and building possibilities.
 
@@ -12,7 +12,8 @@ This mod adds a variety of new blocks to [Better Than Wolves Community Edition 3
     - **Crafting:** On a Soulforge, combine 12 Steel Sheets (added by this mod and crafted from 6 Soulforged Steel Ingots) and 4 Chests to craft 4 Forged Steel Chests at once.
 
 - Additional new blocks
-
+- A series of new obsidian blocks, all with the same blast resistance as obsidian
+- Concrete
 ---
 
 ## Notes

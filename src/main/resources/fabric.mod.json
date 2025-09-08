@@ -1,36 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "extendedcraft",
+  "id": "utilitycraft",
   "version": "${version}",
-  "name": "ExtendedCraft",
+  "name": "Utility Craft",
   "description": "Add a series of new items to BTW-CE-3.X",
   "authors": [
     "Inf1nlty"
   ],
   "contact": {
-    "homepage": "https://github.com/Inf1nlty/ExtendedCraft-BTW",
-    "sources": "https://github.com/Inf1nlty/ExtendedCraft-BTW"
+    "homepage": "https://github.com/Inf1nlty/UtilityCraft-BTW",
+    "sources": "https://github.com/Inf1nlty/UtilityCraft-BTW"
   },
   "license": "MIT",
-  "icon": "assets/extendedcraft/icon.png",
+  "icon": "assets/utilitycraft/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
     ],
     "btw:addon": [
-      "btw.community.extendedcraft.ExtendedCraftAddon"
+      "btw.community.utilitycraft.UtilityCraftAddon"
     ],
     "emi": [
-      "com.inf1nlty.extendedcraft.emi.ECEmiPlugin"
+      "com.inf1nlty.utilitycraft.emi.UCEmiPlugin"
     ]
   },
   "custom": {
-    "btw:addon_prefix": "EC"
+    "btw:addon_prefix": "UC"
   },
   "mixins": [
-    "extendedcraft.mixins.json"
+    "utilitycraft.mixins.json"
   ],
-  "accessWidener" : "extendedcraft.accessWidener",
+  "accessWidener" : "utilitycraft.accessWidener",
   "depends": {
     "fabricloader": ">=0.14.19",
     "minecraft": "1.6.4"
