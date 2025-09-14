@@ -43,7 +43,7 @@ public abstract class EntityPlayerMixin {
 
         if (held != null) {
             Item item = held.getItem();
-            return item == BTWItems.windMillBlade || item == Item.shovelDiamond || item == BTWItems.steelShovel;
+            return item == BTWItems.windMillBlade;
         }
         return false;
     }

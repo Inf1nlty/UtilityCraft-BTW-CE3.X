@@ -23,6 +23,25 @@ public abstract class EntityBoatMixin {
         }
     }
 
+    @Redirect(method = "onUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/src/World;spawnParticle(Ljava/lang/String;DDDDDD)V"))
+
+    private void utilitycraft$dynamicSplash(World world, String particle, double x, double y, double z, double dx, double dy, double dz) {
+        EntityBoat boat = (EntityBoat)(Object)this;
+        String useParticle = particle;
+        if (boat instanceof EntityObsidianBoat) {
+            int blockX = MathHelper.floor_double(x);
+            int blockY = MathHelper.floor_double(y - 0.2D);
+            int blockZ = MathHelper.floor_double(z);
+            int blockId = world.getBlockId(blockX, blockY, blockZ);
+            if (blockId == Block.lavaStill.blockID || blockId == Block.lavaMoving.blockID) {
+                useParticle = "smoke";
+            } else if (blockId == Block.waterStill.blockID || blockId == Block.waterMoving.blockID) {
+                useParticle = "splash";
+            }
+        }
+        world.spawnParticle(useParticle, x, y, z, dx, dy, dz);
+    }
+
     @Unique
     private int utilitycraft$hungerBoostTimer = 0;
 
@@ -38,7 +57,7 @@ public abstract class EntityBoatMixin {
             boolean isShovel = held != null && (held.getItem() == Item.shovelDiamond || held.getItem() == BTWItems.steelShovel);
             boolean isMoving = player.moveForward != 0.0D || player.moveStrafing != 0.0D;
 
-            if (isShovel && player.appliesConstantForceWhenRidingBoat() && isMoving) {
+            if (isShovel && isMoving) {
                 utilitycraft$hungerBoostTimer++;
                 if (utilitycraft$hungerBoostTimer >= 20)
                 {
