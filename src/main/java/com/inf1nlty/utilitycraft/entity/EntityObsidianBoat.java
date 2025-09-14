@@ -26,6 +26,11 @@ public class EntityObsidianBoat extends EntityBoat {
     }
 
     @Override
+    public double getMountedYOffset() {
+        return 0.0D;
+    }
+
+    @Override
     public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
         if (this.isEntityInvulnerable()) {
             this.playSound("step.stone", 0.8F, 0.6F + this.rand.nextFloat() * 0.2F);

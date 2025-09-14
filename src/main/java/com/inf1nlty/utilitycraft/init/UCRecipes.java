@@ -24,118 +24,23 @@ public class UCRecipes {
     }
 
     private static void addCraftingRecipes() {
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianSlab, 6),
-                new Object[] {"OOO", 'O', Block.obsidian}
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianStairs, 6),
-                new Object[] {"O  ", "OO ", "OOO", 'O', Block.obsidian}
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianTrapdoor, 1),
-                new Object[] {"OOO", "OOO", 'O', Block.obsidian}
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianTrapdoor, 2),
-                new Object[] {
-                        "DDM", "DDM",
-                        'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-
-        RecipeManager.addRecipe(new ItemStack(Block.obsidian, 1), new Object[] {
-                "S",
-                "S",
-                'S', UCBlocks.obsidianSlab});
-
-        RecipeManager.addShapelessRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                new Object[] {
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addShapelessRecipe(
-                new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                new Object[] {
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 1),
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 1)
-                }
-        );
-        RecipeManager.addShapelessRecipe(
-                new ItemStack(Block.obsidian, 1),
-                new Object[] {
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianStairs, 1),
-                new Object[] {
-                        "MMM",
-                        'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addShapelessRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 6, 14),
-                new Object[] {
-                        new ItemStack(Block.obsidian, 1, 0),
-                        new ItemStack(Block.obsidian, 1, 0),
-                        new ItemStack(Block.obsidian, 1, 0),
-                        new ItemStack(Block.obsidian, 1, 0),
-                        new ItemStack(Block.obsidian, 1, 0),
-                        new ItemStack(Block.obsidian, 1, 0)
-                }
-        );
-        RecipeManager.addShapelessRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 2, 14),
-                new Object[] {
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 12),
-                new Object[] {
-                        "M",
-                        "M",
-                        "M",
-                        'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 4, 12),
-                new Object[] {
-                        "DDD",
-                        " M ",
-                        'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianMouldingDecorative, 4, 15),
-                new Object[] {
-                        "DDD",
-                        " M ",
-                        " M ",
-                        'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addRecipe(
-                new ItemStack(UCBlocks.obsidianMouldingDecorative, 6, 13),
-                new Object[] {
-                        " D ",
-                        "OOO",
-                        "OOO",
-                        'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        'O', Block.obsidian
-                }
-        );
-
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianSlab, 6), new Object[] {"OOO", 'O', Block.obsidian});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianStairs, 6), new Object[] {"O  ", "OO ", "OOO", 'O', Block.obsidian});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianTrapdoor, 1), new Object[] {"OOO", "OOO", 'O', Block.obsidian});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianTrapdoor, 2), new Object[] {"DDM", "DDM", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(Block.obsidian, 1), new Object[] {"S", "S", 'S', UCBlocks.obsidianSlab});
+        RecipeManager.addShapelessRecipe(new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new Object[] {new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addShapelessRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new Object[] {new ItemStack(UCBlocks.obsidianDecorative, 1, 1), new ItemStack(UCBlocks.obsidianDecorative, 1, 1)});
+        RecipeManager.addShapelessRecipe(new ItemStack(Block.obsidian, 1), new Object[] {new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianStairs, 1), new Object[] {"MMM", 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addShapelessRecipe(new ItemStack(UCBlocks.obsidianDecorative, 6, 14), new Object[] {new ItemStack(Block.obsidian, 1, 0), new ItemStack(Block.obsidian, 1, 0), new ItemStack(Block.obsidian, 1, 0), new ItemStack(Block.obsidian, 1, 0), new ItemStack(Block.obsidian, 1, 0), new ItemStack(Block.obsidian, 1, 0)});
+        RecipeManager.addShapelessRecipe(new ItemStack(UCBlocks.obsidianDecorative, 2, 14), new Object[] {new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 12), new Object[] {"M", "M", "M", 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianDecorative, 4, 12), new Object[] {"DDD", " M ", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 4, 15), new Object[] {"DDD", " M ", " M ", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
+        RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 6, 13), new Object[] {" D ", "OOO", "OOO", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'O', Block.obsidian});
+        RecipeManager.addRecipe(new ItemStack(UtilityCraftItems.obsidian_boat, 1), new Object[] {"   ", "OMO", "OOO", 'O', Block.obsidian, 'M', Item.magmaCream});
+        RecipeManager.addRecipe(new ItemStack(UtilityCraftItems.obsidian_boat, 1), new Object[] {"   ", "SMS", "SSS", 'S', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', Item.magmaCream});
     }
 
     private static void addCauldronRecipes() {
@@ -156,46 +61,10 @@ public class UCRecipes {
     }
 
     private static void addSoulforgeRecipes() {
-        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4),
-                new Object[]{"SSSS", "SCCS", "SCCS", "SSSS",
-                        'S', UtilityCraftItems.soulforged_steel_sheet,
-                        'C', new ItemStack(BTWBlocks.chest)});
-
-        RecipeManager.addShapelessSoulforgeRecipe(
-                new ItemStack(UtilityCraftItems.soulforged_steel_sheet, 8),
-                new Object[] {
-                        new ItemStack(BTWItems.soulforgedSteelIngot),
-                        new ItemStack(BTWItems.soulforgedSteelIngot),
-                        new ItemStack(BTWItems.soulforgedSteelIngot),
-                        new ItemStack(BTWItems.soulforgedSteelIngot)
-                }
-        );
-        RecipeManager.addShapelessSoulforgeRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 8, 0),
-                new Object[] {
-                        Block.obsidian,
-                        Block.obsidian,
-                        Block.obsidian,
-                        Block.obsidian
-                }
-        );
-        RecipeManager.addShapelessSoulforgeRecipe(
-                new ItemStack(UCBlocks.obsidianMouldingDecorative, 8, 0),
-                new Object[] {
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianDecorative, 1, 0)
-                }
-        );
-        RecipeManager.addShapelessSoulforgeRecipe(
-                new ItemStack(UCBlocks.obsidianDecorative, 8, 1),
-                new Object[]{
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0),
-                        new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)
-                }
-        );
+        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4), new Object[]{"SSSS", "SCCS", "SCCS", "SSSS", 'S', UtilityCraftItems.soulforged_steel_sheet, 'C', new ItemStack(BTWBlocks.chest)});
+        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UtilityCraftItems.soulforged_steel_sheet, 8), new Object[] {new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot)});
+        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianDecorative, 8, 0), new Object[] {Block.obsidian, Block.obsidian, Block.obsidian, Block.obsidian});
+        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 8, 0), new Object[] {new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0)});
+        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianDecorative, 8, 1), new Object[]{new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
     }
 }
