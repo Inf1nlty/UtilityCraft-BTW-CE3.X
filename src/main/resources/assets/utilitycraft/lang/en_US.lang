@@ -60,6 +60,7 @@ item.colored_cement_bucket_brown.name=Brown Cement Bucket
 item.colored_cement_bucket_green.name=Green Cement Bucket
 item.colored_cement_bucket_red.name=Red Cement Bucket
 item.colored_cement_bucket_black.name=Black Cement Bucket
+item.obsidian_boat.name=Obsidian Boat
 
 tile.colored_cement_bucket_block_white.name=White Cement Bucket
 tile.colored_cement_bucket_block_orange.name=Orange Cement Bucket

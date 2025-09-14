@@ -17,7 +17,7 @@ public final class ColoredCementCtrlNet {
 
     public static void register(BTWAddon addon) {
 
-        CHANNEL = addon.getModID() + "|CCBCTRL";
+        CHANNEL = addon.getModID() + "|CCB";
 
         addon.registerPacketHandler(CHANNEL, (packet, player) -> {
             if (packet == null || packet.data == null || player == null) return;

@@ -6,12 +6,14 @@ public class UtilityCraftItems {
 
     public static Item soulforged_steel_sheet;
     public static Item colored_cement_bucket;
+    public static Item obsidian_boat;
 
     public static void initMBItems() {
         soulforged_steel_sheet = new UCItem(23334)
                 .setCreativeTab(CreativeTabs.tabMaterials).setTextureName("utilitycraft:soulforged_steel_sheet").setUnlocalizedName("soulforged_steel_sheet");
 
-        colored_cement_bucket = new ItemColoredCementBucket(23340)
-                .setCreativeTab(CreativeTabs.tabMaterials);
+        colored_cement_bucket = new ItemColoredCementBucket(23340).setCreativeTab(CreativeTabs.tabMaterials);
+
+        obsidian_boat = new ItemObsidianBoat(23350).setCreativeTab(CreativeTabs.tabTransport).setTextureName("utilitycraft:obsidian_boat").setUnlocalizedName("obsidian_boat");
     }
 }

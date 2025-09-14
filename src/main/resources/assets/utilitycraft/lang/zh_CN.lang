@@ -60,6 +60,7 @@ item.colored_cement_bucket_brown.name=棕色水泥桶
 item.colored_cement_bucket_green.name=绿色水泥桶
 item.colored_cement_bucket_red.name=红色水泥桶
 item.colored_cement_bucket_black.name=黑色水泥桶
+item.obsidian_boat.name=黑曜石船
 
 tile.colored_cement_bucket_block_white.name=白色水泥桶
 tile.colored_cement_bucket_block_orange.name=橙色水泥桶

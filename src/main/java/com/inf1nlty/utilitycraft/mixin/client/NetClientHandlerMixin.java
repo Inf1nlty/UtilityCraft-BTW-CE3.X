@@ -2,8 +2,10 @@ package com.inf1nlty.utilitycraft.mixin.client;
 
 import com.inf1nlty.utilitycraft.block.BlockSteelChest;
 import com.inf1nlty.utilitycraft.client.gui.GuiLocker;
+import com.inf1nlty.utilitycraft.entity.EntityObsidianBoat;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -42,4 +44,30 @@ public abstract class NetClientHandlerMixin {
 
         ci.cancel();
     }
+
+    @Shadow
+    public WorldClient worldClient;
+
+    @Inject(method = "handleVehicleSpawn", at = @At("HEAD"), cancellable = true)
+    private void utilitycraft$handleObsidianBoat(Packet23VehicleSpawn packet, CallbackInfo ci) {
+        if (packet.type == 101) {
+            double x = (double)packet.xPosition / 32.0D;
+            double y = (double)packet.yPosition / 32.0D;
+            double z = (double)packet.zPosition / 32.0D;
+
+            EntityObsidianBoat boat = new EntityObsidianBoat(worldClient, x, y, z);
+
+            boat.serverPosX = packet.xPosition;
+            boat.serverPosY = packet.yPosition;
+            boat.serverPosZ = packet.zPosition;
+            boat.rotationPitch = (float)(packet.pitch * 360) / 256.0F;
+            boat.rotationYaw = (float)(packet.yaw * 360) / 256.0F;
+            boat.entityId = packet.entityId;
+
+            worldClient.addEntityToWorld(packet.entityId, boat);
+
+            ci.cancel();
+        }
+    }
+
 }
