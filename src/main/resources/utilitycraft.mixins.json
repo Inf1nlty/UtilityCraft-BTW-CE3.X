@@ -7,7 +7,9 @@
     "BTWEntityMapperMixin",
     "EntityBoatMixin",
     "EntityPlayerMixin",
-    "EntityTrackerEntryMixin"
+    "EntityTrackerEntryMixin",
+    "client.render.EffectRendererMixin",
+    "world.item.ItemSwordMixin"
   ],
   "client": [
     "MinecraftMixin",
