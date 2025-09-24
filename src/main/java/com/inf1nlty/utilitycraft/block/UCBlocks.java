@@ -19,35 +19,34 @@ public class UCBlocks {
 
     public static void initMBBlocks() {
 
-        steelChest = new BlockSteelChest(3100,1);
+        steelChest = new BlockSteelChest(3700,1);
         Item.itemsList[steelChest.blockID] = new UCItemBlock(steelChest.blockID - 256);
         TileEntity.addMapping(TileEntitySteelChest.class, "utilitycraft:steel_chest");
 
-        concrete = new BlockConcrete(3500);
+        concrete = new BlockConcrete(3701);
         Item.itemsList[concrete.blockID] = new ItemConcrete(concrete.blockID - 256);
 
-        coloredCement = new BlockColoredCement(3501, concrete);
+        coloredCement = new BlockColoredCement(3702, concrete);
         Item.itemsList[coloredCement.blockID] = new ItemBlockColoredCement(coloredCement.blockID - 256);
         TileEntity.addMapping(TileEntityColoredCement.class, "utilitycraft:colored_cement");
 
-        coloredCementBucketBlock = new BlockBucketBlockColoredCement(3502);
+        coloredCementBucketBlock = new BlockBucketBlockColoredCement(3703);
         Item.itemsList[coloredCementBucketBlock.blockID] = new ItemBlockColoredCementBucket(coloredCementBucketBlock.blockID - 256);
         TileEntity.addMapping(TileEntityColoredCementBucket.class, "utilitycraft:colored_cement_bucket_block");
 
-        obsidianSlab = new BlockObsidianSlab(3600);
+        obsidianSlab = new BlockObsidianSlab(3704);
         Item.itemsList[obsidianSlab.blockID] = new UCSlabBlockItem(obsidianSlab.blockID - 256);
 
-        obsidianStairs = new BlockObsidianStairs(3601);
-        Block.blocksList[3601] = obsidianStairs;
+        obsidianStairs = new BlockObsidianStairs(3705);
         Item.itemsList[obsidianStairs.blockID] = new UCItemBlock(obsidianStairs.blockID - 256);
 
-        obsidianTrapdoor = new BlockObsidianTrapdoor(3602);
+        obsidianTrapdoor = new BlockObsidianTrapdoor(3706);
         Item.itemsList[obsidianTrapdoor.blockID] = new UCItemBlock(obsidianTrapdoor.blockID - 256);
 
-        obsidianDecorative = new BlockObsidianDecorative(3604);
+        obsidianDecorative = new BlockObsidianDecorative(3707);
         Item.itemsList[obsidianDecorative.blockID] = new ItemObsidianDecorative(obsidianDecorative.blockID - 256);
 
-        obsidianMouldingDecorative = new BlockObsidianMouldingAndDecorative(3605, obsidianDecorative.blockID);
+        obsidianMouldingDecorative = new BlockObsidianMouldingAndDecorative(3708, obsidianDecorative.blockID);
         Item.itemsList[obsidianMouldingDecorative.blockID] = new ItemObsidianMouldingAndDecorative(obsidianMouldingDecorative.blockID - 256);
 
     }

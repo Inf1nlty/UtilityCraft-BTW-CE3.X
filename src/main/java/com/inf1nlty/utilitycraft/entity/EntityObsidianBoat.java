@@ -4,7 +4,7 @@ import btw.block.blocks.BlockDispenserBlock;
 import btw.block.tileentity.dispenser.BlockDispenserTileEntity;
 import btw.inventory.util.InventoryUtils;
 import btw.item.items.PickaxeItem;
-import com.inf1nlty.utilitycraft.item.UtilityCraftItems;
+import com.inf1nlty.utilitycraft.item.UCItems;
 import net.minecraft.src.*;
 
 public class EntityObsidianBoat extends EntityBoat {
@@ -72,7 +72,7 @@ public class EntityObsidianBoat extends EntityBoat {
             if (!this.worldObj.isRemote && !this.isDead) {
                 this.setDead();
 
-                ItemStack drop = new ItemStack(UtilityCraftItems.obsidian_boat);
+                ItemStack drop = new ItemStack(UCItems.obsidian_boat);
                 double sx = this.posX, sy = this.posY + 0.5, sz = this.posZ;
                 EntityItem entityItem = new EntityItem(this.worldObj, sx, sy, sz, drop);
 
@@ -112,7 +112,7 @@ public class EntityObsidianBoat extends EntityBoat {
     @Override
     public boolean onBlockDispenserConsume(BlockDispenserBlock blockDispenser, BlockDispenserTileEntity tileEentityDispenser) {
         this.setDead();
-        InventoryUtils.addSingleItemToInventory(tileEentityDispenser, UtilityCraftItems.obsidian_boat.itemID, 0);
+        InventoryUtils.addSingleItemToInventory(tileEentityDispenser, UCItems.obsidian_boat.itemID, 0);
         this.worldObj.playAuxSFX(1001, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
         return true;
     }

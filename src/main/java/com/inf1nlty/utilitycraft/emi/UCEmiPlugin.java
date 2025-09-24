@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft.emi;
 
 import com.inf1nlty.utilitycraft.block.UCBlocks;
-import com.inf1nlty.utilitycraft.item.UtilityCraftItems;
+import com.inf1nlty.utilitycraft.item.UCItems;
 import emi.dev.emi.emi.api.EmiPlugin;
 import emi.dev.emi.emi.api.EmiRegistry;
 import emi.dev.emi.emi.api.recipe.EmiWorldInteractionRecipe;
@@ -11,11 +11,11 @@ public class UCEmiPlugin implements EmiPlugin {
 
     @Override
     public void register(EmiRegistry registry) {
-        if (UCBlocks.coloredCement == null || UCBlocks.concrete == null || UtilityCraftItems.colored_cement_bucket == null) {
+        if (UCBlocks.coloredCement == null || UCBlocks.concrete == null || UCItems.colored_cement_bucket == null) {
             return;
         }
 
-        Item bucketItem = UtilityCraftItems.colored_cement_bucket;
+        Item bucketItem = UCItems.colored_cement_bucket;
         Item cementBlockItem = Item.itemsList[UCBlocks.coloredCement.blockID];
         Item concreteItem = Item.itemsList[UCBlocks.concrete.blockID];
 

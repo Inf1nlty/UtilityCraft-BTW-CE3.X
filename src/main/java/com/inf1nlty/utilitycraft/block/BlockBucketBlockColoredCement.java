@@ -2,7 +2,7 @@ package com.inf1nlty.utilitycraft.block;
 
 import btw.block.blocks.BucketBlockFull;
 import com.inf1nlty.utilitycraft.client.render.ClientRenderHelper;
-import com.inf1nlty.utilitycraft.item.UtilityCraftItems;
+import com.inf1nlty.utilitycraft.item.UCItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
@@ -154,9 +154,9 @@ public class BlockBucketBlockColoredCement extends BucketBlockFull {
         if (w.isRemote) return;
 
         int meta = w.getBlockMetadata(x, y, z);
-        if (!player.capabilities.isCreativeMode && UtilityCraftItems.colored_cement_bucket != null) {
+        if (!player.capabilities.isCreativeMode && UCItems.colored_cement_bucket != null) {
             int color = getColor(meta);
-            ItemStack drop = new ItemStack(UtilityCraftItems.colored_cement_bucket, 1, color);
+            ItemStack drop = new ItemStack(UCItems.colored_cement_bucket, 1, color);
             EntityItem ent = new EntityItem(w, x + 0.5, y + 0.5, z + 0.5, drop);
             w.spawnEntityInWorld(ent);
         }
@@ -168,9 +168,9 @@ public class BlockBucketBlockColoredCement extends BucketBlockFull {
     @Override
     public void onBlockHarvested(World w, int x, int y, int z, int meta, EntityPlayer player) {
         // Still handle normal harvest (e.g. explosions or other removal paths).
-        if (!w.isRemote && !player.capabilities.isCreativeMode && UtilityCraftItems.colored_cement_bucket != null) {
+        if (!w.isRemote && !player.capabilities.isCreativeMode && UCItems.colored_cement_bucket != null) {
             int color = getColor(meta);
-            ItemStack drop = new ItemStack(UtilityCraftItems.colored_cement_bucket, 1, color);
+            ItemStack drop = new ItemStack(UCItems.colored_cement_bucket, 1, color);
             EntityItem ent = new EntityItem(w, x + 0.5, y + 0.5, z + 0.5, drop);
             w.spawnEntityInWorld(ent);
         }

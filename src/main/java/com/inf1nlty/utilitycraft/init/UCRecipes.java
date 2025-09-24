@@ -4,7 +4,7 @@ import btw.block.BTWBlocks;
 import btw.crafting.recipe.RecipeManager;
 import btw.item.BTWItems;
 import com.inf1nlty.utilitycraft.block.UCBlocks;
-import com.inf1nlty.utilitycraft.item.UtilityCraftItems;
+import com.inf1nlty.utilitycraft.item.UCItems;
 import net.minecraft.src.Block;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
@@ -39,15 +39,15 @@ public class UCRecipes {
         RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianDecorative, 4, 12), new Object[] {"DDD", " M ", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
         RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 4, 15), new Object[] {"DDD", " M ", " M ", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});
         RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 6, 13), new Object[] {" D ", "OOO", "OOO", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'O', Block.obsidian});
-        RecipeManager.addRecipe(new ItemStack(UtilityCraftItems.obsidian_boat, 1), new Object[] {"   ", "OMO", "OOO", 'O', Block.obsidian, 'M', Item.magmaCream});
-        RecipeManager.addRecipe(new ItemStack(UtilityCraftItems.obsidian_boat, 1), new Object[] {"   ", "SMS", "SSS", 'S', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', Item.magmaCream});
+        RecipeManager.addRecipe(new ItemStack(UCItems.obsidian_boat, 1), new Object[] {"   ", "OMO", "OOO", 'O', Block.obsidian, 'M', Item.magmaCream});
+        RecipeManager.addRecipe(new ItemStack(UCItems.obsidian_boat, 1), new Object[] {"   ", "SMS", "SSS", 'S', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', Item.magmaCream});
     }
 
     private static void addCauldronRecipes() {
 
         for (int color = 0; color < 16; color++) {
             ItemStack[] outputs = new ItemStack[]{
-                    new ItemStack(UtilityCraftItems.colored_cement_bucket, 1, color),
+                    new ItemStack(UCItems.colored_cement_bucket, 1, color),
                     new ItemStack(Item.glassBottle, 1)
             };
             ItemStack[] inputs = new ItemStack[]{
@@ -61,8 +61,8 @@ public class UCRecipes {
     }
 
     private static void addSoulforgeRecipes() {
-        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4), new Object[]{"SSSS", "SCCS", "SCCS", "SSSS", 'S', UtilityCraftItems.soulforged_steel_sheet, 'C', new ItemStack(BTWBlocks.chest)});
-        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UtilityCraftItems.soulforged_steel_sheet, 8), new Object[] {new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot)});
+        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4), new Object[]{"SSSS", "SCCS", "SCCS", "SSSS", 'S', UCItems.soulforged_steel_sheet, 'C', new ItemStack(BTWBlocks.chest)});
+        RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_sheet, 8), new Object[] {new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot)});
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianDecorative, 8, 0), new Object[] {Block.obsidian, Block.obsidian, Block.obsidian, Block.obsidian});
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 8, 0), new Object[] {new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0)});
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianDecorative, 8, 1), new Object[]{new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0), new ItemStack(UCBlocks.obsidianMouldingDecorative, 1, 0)});

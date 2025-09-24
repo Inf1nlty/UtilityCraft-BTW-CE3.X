@@ -4,7 +4,7 @@ import btw.BTWAddon;
 import btw.AddonHandler;
 import com.inf1nlty.utilitycraft.block.UCBlocks;
 import com.inf1nlty.utilitycraft.init.UCRecipes;
-import com.inf1nlty.utilitycraft.item.UtilityCraftItems;
+import com.inf1nlty.utilitycraft.item.UCItems;
 import com.inf1nlty.utilitycraft.network.ColoredCementCtrlNet;
 import com.inf1nlty.utilitycraft.network.SteelLockerNet;
 
@@ -13,7 +13,7 @@ public class UtilityCraftAddon extends BTWAddon {
     public void initialize() {
         AddonHandler.logMessage(getName() + " v" + getVersionString() + " Initializing...");
         UCBlocks.initMBBlocks();
-        UtilityCraftItems.initMBItems();
+        UCItems.initMBItems();
         UCRecipes.initMBRecipes();
 
         SteelLockerNet.register(this);

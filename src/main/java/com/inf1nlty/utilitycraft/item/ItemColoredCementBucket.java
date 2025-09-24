@@ -26,7 +26,7 @@ public class ItemColoredCementBucket extends UCItem {
         setUnlocalizedName("colored_cement_bucket");
         setHasSubtypes(true);
         setMaxDamage(0);
-        setCreativeTab(CreativeTabs.tabMaterials);
+        setCreativeTab(CreativeTabs.tabMisc);
         setMaxStackSize(1);
     }
 
@@ -154,7 +154,7 @@ public class ItemColoredCementBucket extends UCItem {
     public void registerIcons(IconRegister reg) {
         icons = new Icon[16];
         for (int i=0;i<16;i++) {
-            icons[i] = reg.registerIcon("utilitycraft:" + COLOR_NAMES[i] + "_cement_bucket");
+            icons[i] = reg.registerIcon("utilitycraft:cement_bucket/" + COLOR_NAMES[i] + "_cement_bucket");
         }
         itemIcon = icons[0];
     }

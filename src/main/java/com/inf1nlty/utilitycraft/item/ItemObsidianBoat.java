@@ -14,6 +14,7 @@ public class ItemObsidianBoat extends UCItem {
         setBuoyant();
         setIncineratedInCrucible();
         setUnlocalizedName("obsidian_boat");
+        setTextureName("utilitycraft:obsidian_boat");
     }
 
     @Override
