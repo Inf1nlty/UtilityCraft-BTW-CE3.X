@@ -75,7 +75,12 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean advanced) {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
-            info.add(StatCollector.translateToLocal("item.utilitycraft.saber.desc"));
+
+            int sweepLevel = EnchantmentHelper.getEnchantmentLevel(UCEnchantments.sweepingEdge.effectId, stack);
+            float baseDamage = this.getDamage() + 1.0F;
+            float sweepDamage = UCDamageUtils.getSweepDamage(baseDamage, sweepLevel);
+
+            info.add(StatCollector.translateToLocalFormatted("item.utilitycraft.saber.desc", sweepDamage));
         } else {
             info.add(StatCollector.translateToLocal("item.utilitycraft.saber.tip"));
         }

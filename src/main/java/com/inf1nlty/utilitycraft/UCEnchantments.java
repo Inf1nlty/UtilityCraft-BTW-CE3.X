@@ -16,21 +16,19 @@ public class UCEnchantments extends Enchantment {
         this.canBeAppliedByVanillaEnchanter = true;
     }
 
-    public static void registerEnchantment() {
+    public static void registerEnchantments() {
         sweepingEdge = new UCEnchantments(SWEEPING_EDGE_ID, 2);
         arcaneSoulMendingScroll = new ItemStack(BTWItems.arcaneScroll, 1, SWEEPING_EDGE_ID);
     }
 
     @Override
     public boolean canBeAppliedByVanillaEnchanter() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean canApply(ItemStack stack) {
-        if (stack == null) return false;
-        Item item = stack.getItem();
-        return item instanceof ISweepAttack;
+        return stack.getItem() instanceof ISweepAttack;
     }
 
     @Override

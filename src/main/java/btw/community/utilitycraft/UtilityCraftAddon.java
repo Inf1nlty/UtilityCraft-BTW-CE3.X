@@ -23,10 +23,10 @@ public class UtilityCraftAddon extends BTWAddon {
     @Override
     public void initialize() {
         AddonHandler.logMessage(getName() + " v" + getVersionString() + " Initializing...");
-        UCBlocks.initMBBlocks();
-        UCItems.initMBItems();
-        UCRecipes.initMBRecipes();
-        UCEnchantments.registerEnchantment();
+        UCBlocks.registerBlocks();
+        UCItems.registerItems();
+        UCRecipes.registerRecipes();
+        UCEnchantments.registerEnchantments();
 
         SteelLockerNet.register(this);
         ColoredCementCtrlNet.register(this);

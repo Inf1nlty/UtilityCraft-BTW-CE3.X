@@ -13,7 +13,7 @@ public class UCRecipes {
 
     private static final int[] DYE_META_FOR_COLOR = {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
 
-    public static void initMBRecipes() {
+    public static void registerRecipes() {
         addCraftingRecipes();
 //        addCampfireRecipes();
         addCrucibleRecipes();

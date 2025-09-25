@@ -17,7 +17,7 @@ public class UCBlocks {
     public static BlockObsidianTrapdoor obsidianTrapdoor;
     public static BlockObsidianMouldingAndDecorative obsidianMouldingDecorative;
 
-    public static void initMBBlocks() {
+    public static void registerBlocks() {
 
         steelChest = new BlockSteelChest(3700,1);
         Item.itemsList[steelChest.blockID] = new UCItemBlock(steelChest.blockID - 256);
