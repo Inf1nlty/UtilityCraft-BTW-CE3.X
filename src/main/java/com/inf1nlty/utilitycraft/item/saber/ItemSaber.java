@@ -1,9 +1,9 @@
-package com.inf1nlty.utilitycraft.item;
+package com.inf1nlty.utilitycraft.item.saber;
 
 import btw.community.utilitycraft.UtilityCraftAddon;
 import btw.item.items.SwordItem;
 import com.inf1nlty.utilitycraft.UCEnchantments;
-import com.inf1nlty.utilitycraft.item.saber.ISaber;
+import com.inf1nlty.utilitycraft.item.ISweepAttack;
 import com.inf1nlty.utilitycraft.network.SweepParticleNet;
 import com.inf1nlty.utilitycraft.util.UCDamageUtils;
 import net.minecraft.src.*;

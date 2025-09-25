@@ -1,7 +1,12 @@
 item.soulforged_steel_sheet.name=Soulforged Steel Sheet
+item.golden_saber.name=Golden Saber
 item.iron_saber.name=Iron Saber
 item.diamond_saber.name=Diamond Saber
 item.soulforged_steel_saber.name=Soulforged Steel Saber
+item.golden_rapier.name=Golden Rapier
+item.iron_rapier.name=Iron Rapier
+item.diamond_rapier.name=Diamond Rapier
+item.soulforged_steel_rapier.name=Soulforged Steel Rapier
 
 tile.SteelChest.name=Soulforged Steel Chest
 

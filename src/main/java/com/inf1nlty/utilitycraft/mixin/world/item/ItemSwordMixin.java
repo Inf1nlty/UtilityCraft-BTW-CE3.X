@@ -1,5 +1,6 @@
 package com.inf1nlty.utilitycraft.mixin.world.item;
 
+import com.inf1nlty.utilitycraft.item.rapier.IRapier;
 import com.inf1nlty.utilitycraft.item.saber.ISaber;
 import net.minecraft.src.EnumToolMaterial;
 import net.minecraft.src.ItemSword;
@@ -19,6 +20,8 @@ public abstract class ItemSwordMixin {
 
         if (this instanceof ISaber) {
             this.weaponDamage = ((ISaber)this).getDamage();
+        } else if (this instanceof IRapier) {
+            this.weaponDamage = ((IRapier)this).getDamage();
         }
     }
 }
