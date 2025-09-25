@@ -35,22 +35,31 @@ public abstract class EntityLivingBaseMixin {
         if (src != null && src.getEntity() instanceof EntityLivingBase attacker) {
             ItemStack held = attacker.getHeldItem();
             if (held != null && held.getItem() instanceof IRapier) {
-                return 0;
+                return Math.max(0, orig / 2);
             }
         }
         return orig;
     }
 
-    @Inject(method = "attackEntityFrom", at = @At("HEAD"))
-    private void modifyInvulnerability(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "attackEntityFrom", at = @At("RETURN"))
+    private void adjustRapierInvulnerabilityFrames(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (!cir.getReturnValue()) return;
 
-        if (source != null && "rapier".equals(source.damageType)) {
+        EntityLivingBase self = (EntityLivingBase)(Object)this;
 
-            EntityLivingBase self = (EntityLivingBase)(Object)this;
+        if (source != null && source.getEntity() instanceof EntityLivingBase attacker) {
 
-            int newInvul = Math.round(10.0f * 1.6f / 2.4f);
-            self.hurtResistantTime = newInvul;
-            self.maxHurtResistantTime = newInvul;
+            ItemStack held = attacker.getHeldItem();
+
+            if (held != null && held.getItem() instanceof IRapier) {
+
+                if (self.hurtResistantTime == self.maxHurtResistantTime) {
+
+                    self.hurtResistantTime = 18;
+
+                    self.maxHurtResistantTime = 20;
+                }
+            }
         }
     }
 }

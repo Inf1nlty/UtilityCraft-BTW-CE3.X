@@ -106,4 +106,4 @@ tile.obsidian_moulding_decorative.table.name=Obsidian Table
 enchantment.sweeping_edge=Sweeping Edge
 
 item.utilitycraft.rapier.tip=§7Hold §eShift§7 for more info
-item.utilitycraft.rapier.desc=§bRapier:\n§7· Ignores 50%% armor\n§7· High attack speed\n§7· Great for precise single-target combat
+item.utilitycraft.rapier.desc=§bAttacks faster and ignores 50% of the target's armor.
