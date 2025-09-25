@@ -7,13 +7,18 @@ public class GoldenSaber extends ItemSaber implements ISweepAttack {
 
     public GoldenSaber(int id) {
         super(id, EnumToolMaterial.EMERALD);
-        this.setUnlocalizedName("gold_saber");
-        this.setTextureName("utilitycraft:saber/gold_saber");
+        this.setUnlocalizedName("golden_saber");
+        this.setTextureName("utilitycraft:saber/golden_saber");
         this.setCreativeTab(CreativeTabs.tabCombat);
     }
 
     @Override
     public float getDamage() {
         return 4.5F;
+    }
+
+    @Override
+    public int getInfernalMaxNumEnchants() {
+        return 4;
     }
 }

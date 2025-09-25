@@ -1,12 +1,14 @@
 item.soulforged_steel_sheet.name=熔魂钢板
+
 item.golden_saber.name=金军刀
 item.iron_saber.name=铁军刀
 item.diamond_saber.name=钻石军刀
 item.soulforged_steel_saber.name=熔魂钢军刀
-item.golden_rapier.name=金西洋剑
-item.iron_rapier.name=铁西洋剑
-item.diamond_rapier.name=钻石西洋剑
-item.soulforged_steel_rapier.name=熔魂钢西洋剑
+
+item.golden_rapier.name=金迅捷剑
+item.iron_rapier.name=铁迅捷剑
+item.diamond_rapier.name=钻石迅捷剑
+item.soulforged_steel_rapier.name=熔魂钢迅捷剑
 
 tile.SteelChest.name=熔魂钢箱子
 
@@ -102,3 +104,6 @@ tile.obsidian_moulding_decorative.pedestal.name=黑曜石基座
 tile.obsidian_moulding_decorative.table.name=黑曜石桌子
 
 enchantment.sweeping_edge=横扫之刃
+
+item.utilitycraft.rapier.tip=§7按住§eShift§7查看更多信息
+item.utilitycraft.rapier.desc=§b攻击速度较快且无视目标50%护甲

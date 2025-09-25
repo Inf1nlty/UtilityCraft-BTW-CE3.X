@@ -16,4 +16,9 @@ public class DiamondSaber extends ItemSaber implements ISweepAttack {
     public float getDamage() {
         return 5;
     }
+
+    @Override
+    public int getInfernalMaxNumEnchants() {
+        return 3;
+    }
 }

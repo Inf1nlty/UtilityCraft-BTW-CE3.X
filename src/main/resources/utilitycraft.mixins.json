@@ -9,6 +9,7 @@
     "EntityPlayerMixin",
     "EntityTrackerEntryMixin",
     "client.render.EffectRendererMixin",
+    "entity.EntityLivingBaseMixin",
     "world.item.ItemSwordMixin"
   ],
   "client": [

@@ -16,7 +16,7 @@ public class UCRecipes {
     public static void initMBRecipes() {
         addCraftingRecipes();
 //        addCampfireRecipes();
-//        addCrucibleRecipes();
+        addCrucibleRecipes();
         addCauldronRecipes();
 //        addMillstoneRecipes();
 //        addOvenRecipes();
@@ -41,6 +41,16 @@ public class UCRecipes {
         RecipeManager.addRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 6, 13), new Object[] {" D ", "OOO", "OOO", 'D', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'O', Block.obsidian});
         RecipeManager.addRecipe(new ItemStack(UCItems.obsidian_boat, 1), new Object[] {"   ", "OMO", "OOO", 'O', Block.obsidian, 'M', Item.magmaCream});
         RecipeManager.addRecipe(new ItemStack(UCItems.obsidian_boat, 1), new Object[] {"   ", "SMS", "SSS", 'S', new ItemStack(UCBlocks.obsidianDecorative, 1, 0), 'M', Item.magmaCream});
+
+        RecipeManager.addRecipe(new ItemStack(UCItems.golden_saber, 1), new Object[] {" G ", " G ", "GH ", 'G', new ItemStack(Item.ingotGold, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.iron_saber, 1), new Object[] {" I ", " I ", "IH ", 'I', new ItemStack(Item.ingotIron, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.diamond_saber, 1), new Object[] {" D ", " D ", "DH ", 'D', new ItemStack(BTWItems.diamondIngot, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {" S ", " S ", "SH ", 'S', new ItemStack(UCItems.soulforged_steel_sheet, 1, 0), 'H', BTWItems.haft});
+
+        RecipeManager.addRecipe(new ItemStack(UCItems.golden_rapier, 1), new Object[] {"  G", "GG ", "HG ", 'G', new ItemStack(Item.ingotGold, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.iron_rapier, 1), new Object[] {"  I", "II ", "HI ", 'I', new ItemStack(Item.ingotIron, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.diamond_rapier, 1), new Object[] {"  D", "DD ", "HD ", 'D', new ItemStack(BTWItems.diamondIngot, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addRecipe(new ItemStack(UCItems.soulforged_steel_rapier, 1), new Object[] {"  S", "SS ", "HS ", 'S', new ItemStack(UCItems.soulforged_steel_sheet, 1, 0), 'H', BTWItems.haft});
     }
 
     private static void addCauldronRecipes() {
@@ -58,6 +68,18 @@ public class UCRecipes {
             };
             RecipeManager.addCauldronRecipe(outputs, inputs);
         }
+    }
+
+    private static void addCrucibleRecipes() {
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(Item.goldNugget, 18), new ItemStack[]{new ItemStack(UCItems.golden_saber, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.ironNugget, 18), new ItemStack[]{new ItemStack(UCItems.iron_saber, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.diamondIngot, 3), new ItemStack[]{new ItemStack(UCItems.diamond_saber, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(UCItems.soulforged_steel_sheet, 4), new ItemStack[]{new ItemStack(UCItems.soulforged_steel_saber, 1, Short.MAX_VALUE)});
+
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(Item.goldNugget, 24), new ItemStack[]{new ItemStack(UCItems.golden_rapier, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.ironNugget, 24), new ItemStack[]{new ItemStack(UCItems.iron_rapier, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.diamondIngot, 4), new ItemStack[]{new ItemStack(UCItems.diamond_rapier, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(UCItems.soulforged_steel_sheet, 4), new ItemStack[]{new ItemStack(UCItems.soulforged_steel_rapier, 1, Short.MAX_VALUE)});
     }
 
     private static void addSoulforgeRecipes() {

@@ -16,4 +16,9 @@ public class DiamondRapier extends ItemRapier {
     public float getDamage() {
         return 4;
     }
+
+    @Override
+    public int getInfernalMaxNumEnchants() {
+        return 3;
+    }
 }

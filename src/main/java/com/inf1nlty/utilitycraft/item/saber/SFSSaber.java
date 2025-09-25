@@ -16,4 +16,9 @@ public class SFSSaber extends ItemSaber implements ISweepAttack {
     public float getDamage() {
         return 6;
     }
+
+    @Override
+    public int getInfernalMaxNumEnchants() {
+        return 5;
+    }
 }

@@ -7,13 +7,18 @@ public class SFSRapier extends ItemRapier {
 
     public SFSRapier(int id) {
         super(id, EnumToolMaterial.SOULFORGED_STEEL);
-        this.setUnlocalizedName("diamond_rapier");
-        this.setTextureName("utilitycraft:rapier/diamond_rapier");
+        this.setUnlocalizedName("soulforged_steel_rapier");
+        this.setTextureName("utilitycraft:rapier/soulforged_steel_rapier");
         this.setCreativeTab(CreativeTabs.tabCombat);
     }
 
     @Override
     public float getDamage() {
+        return 5;
+    }
+
+    @Override
+    public int getInfernalMaxNumEnchants() {
         return 5;
     }
 }
