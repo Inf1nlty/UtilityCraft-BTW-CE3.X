@@ -7,6 +7,7 @@ import com.inf1nlty.utilitycraft.item.ISweepAttack;
 import com.inf1nlty.utilitycraft.network.SweepParticleNet;
 import com.inf1nlty.utilitycraft.util.UCDamageUtils;
 import net.minecraft.src.*;
+import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
@@ -67,6 +68,16 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
             double py = player.posY + player.getEyeHeight() - 0.4D;
             double pz = player.posZ + Math.cos(Math.toRadians(yaw)) * 0.5D;
             SweepParticleNet.sendSweepAttack((EntityPlayerMP)player, px, py, pz, yaw);
+        }
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean advanced) {
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
+            info.add(StatCollector.translateToLocal("item.utilitycraft.saber.desc"));
+        } else {
+            info.add(StatCollector.translateToLocal("item.utilitycraft.saber.tip"));
         }
     }
 }

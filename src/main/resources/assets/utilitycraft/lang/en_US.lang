@@ -105,5 +105,7 @@ tile.obsidian_moulding_decorative.table.name=Obsidian Table
 
 enchantment.sweeping_edge=Sweeping Edge
 
-item.utilitycraft.rapier.tip=§7Hold §eShift§7 for more info
+item.utilitycraft.rapier.tip=§7Hold §eShift§7 for more information
 item.utilitycraft.rapier.desc=§bAttacks faster and ignores 50% of the target's armor.
+item.utilitycraft.saber.tip=§7Hold §eShift§7 for more information
+item.utilitycraft.saber.desc=§bHas 1 point of Sweeping Edge damage effect
