@@ -3,3 +3,4 @@ accessible field net/minecraft/src/ItemTool efficiencyOnProperMaterial F
 accessible field net/minecraft/src/EntityPlayer username Ljava/lang/String;
 accessible field net/minecraft/src/ItemTool toolMaterial Lnet/minecraft/src/EnumToolMaterial;
 accessible field net/minecraft/src/NetClientHandler worldClient Lnet/minecraft/src/WorldClient;
+accessible field net/minecraft/src/Enchantment canBeAppliedByVanillaEnchanter Z

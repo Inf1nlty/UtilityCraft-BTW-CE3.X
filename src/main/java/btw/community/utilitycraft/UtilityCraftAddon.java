@@ -3,6 +3,7 @@ package btw.community.utilitycraft;
 import btw.BTWAddon;
 import btw.AddonHandler;
 import btw.util.sounds.AddonSoundRegistryEntry;
+import com.inf1nlty.utilitycraft.UCEnchantments;
 import com.inf1nlty.utilitycraft.block.UCBlocks;
 import com.inf1nlty.utilitycraft.init.UCRecipes;
 import com.inf1nlty.utilitycraft.item.UCItems;
@@ -25,6 +26,7 @@ public class UtilityCraftAddon extends BTWAddon {
         UCBlocks.initMBBlocks();
         UCItems.initMBItems();
         UCRecipes.initMBRecipes();
+        UCEnchantments.registerEnchantment();
 
         SteelLockerNet.register(this);
         ColoredCementCtrlNet.register(this);

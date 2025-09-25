@@ -1,4 +1,5 @@
 item.soulforged_steel_sheet.name=熔魂钢板
+item.iron_saber.name=铁军刀
 item.diamond_saber.name=钻石军刀
 item.soulforged_steel_saber.name=熔魂钢军刀
 
@@ -94,3 +95,5 @@ tile.obsidian_moulding_decorative.moulding.name=黑曜石条
 tile.obsidian_moulding_decorative.column.name=黑曜石柱子
 tile.obsidian_moulding_decorative.pedestal.name=黑曜石基座
 tile.obsidian_moulding_decorative.table.name=黑曜石桌子
+
+enchantment.sweeping_edge=横扫之刃

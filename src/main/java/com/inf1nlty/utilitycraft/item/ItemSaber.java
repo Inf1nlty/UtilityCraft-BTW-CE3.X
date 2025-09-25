@@ -2,8 +2,10 @@ package com.inf1nlty.utilitycraft.item;
 
 import btw.community.utilitycraft.UtilityCraftAddon;
 import btw.item.items.SwordItem;
+import com.inf1nlty.utilitycraft.UCEnchantments;
 import com.inf1nlty.utilitycraft.item.saber.ISaber;
 import com.inf1nlty.utilitycraft.network.SweepParticleNet;
+import com.inf1nlty.utilitycraft.util.UCDamageUtils;
 import net.minecraft.src.*;
 
 import java.util.List;
@@ -32,8 +34,12 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
 
     @Override
     public void onSweepAttack(EntityPlayer player, Entity target) {
-        target.attackEntityFrom(DamageSource.causePlayerDamage(player), 1.0F);
+
+        float mainDamage = this.getDamage();
         double sweepRange = 1.0D;
+        int sweepLevel = EnchantmentHelper.getEnchantmentLevel(UCEnchantments.sweepingEdge.effectId, player.getCurrentEquippedItem());
+        float sweepDamage = UCDamageUtils.getSweepDamage(mainDamage, sweepLevel);
+        target.attackEntityFrom(DamageSource.causePlayerDamage(player), mainDamage);
 
         @SuppressWarnings("unchecked")
         List<EntityLivingBase> sweepTargets = player.worldObj.getEntitiesWithinAABB(
@@ -46,8 +52,8 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
             if (nearby != target && nearby != player && player.canEntityBeSeen(nearby) && nearby.isEntityAlive()) {
                 double dx = player.posX - nearby.posX;
                 double dz = player.posZ - nearby.posZ;
-                nearby.knockBack(player, knockbackStrength, dx, dz); // 100% vanilla
-                nearby.attackEntityFrom(DamageSource.causePlayerDamage(player), 1.0F);
+                nearby.knockBack(player, knockbackStrength, dx, dz);
+                nearby.attackEntityFrom(DamageSource.causePlayerDamage(player), sweepDamage);
             }
         }
 
