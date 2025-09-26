@@ -20,7 +20,9 @@ public abstract class ItemSwordMixin {
 
         if (this instanceof ISaber) {
             this.weaponDamage = ((ISaber)this).getDamage();
-        } else if (this instanceof IRapier) {
+        }
+
+        else if (this instanceof IRapier) {
             this.weaponDamage = ((IRapier)this).getDamage();
         }
     }

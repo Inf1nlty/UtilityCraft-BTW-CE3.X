@@ -4,7 +4,6 @@ import btw.community.utilitycraft.UtilityCraftAddon;
 import btw.item.items.SwordItem;
 import com.inf1nlty.utilitycraft.UCEnchantments;
 import com.inf1nlty.utilitycraft.item.ISweepAttack;
-import com.inf1nlty.utilitycraft.network.SweepParticleNet;
 import com.inf1nlty.utilitycraft.util.UCDamageUtils;
 import net.minecraft.src.*;
 import org.lwjgl.input.Keyboard;
@@ -57,18 +56,13 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
                 nearby.attackEntityFrom(DamageSource.causePlayerDamage(player), sweepDamage);
             }
         }
+    }
 
+    @Override
+    public void playAttackSound(EntityPlayer player, EntityLivingBase target) {
         int sweepIndex = player.worldObj.rand.nextInt(UtilityCraftAddon.SWEEP_ATTACK_SOUNDS.length);
-        String soundName = UtilityCraftAddon.SWEEP_ATTACK_SOUNDS[sweepIndex].sound();
-        player.worldObj.playSoundAtEntity(player, soundName, 0.8F, 1.0F);
-
-        if (player instanceof EntityPlayerMP) {
-            float yaw = player.rotationYaw;
-            double px = player.posX - Math.sin(Math.toRadians(yaw)) * 0.5D;
-            double py = player.posY + player.getEyeHeight() - 0.4D;
-            double pz = player.posZ + Math.cos(Math.toRadians(yaw)) * 0.5D;
-            SweepParticleNet.sendSweepAttack((EntityPlayerMP)player, px, py, pz, yaw);
-        }
+        String sweepSound = UtilityCraftAddon.SWEEP_ATTACK_SOUNDS[sweepIndex].sound();
+        player.worldObj.playSoundAtEntity(player, sweepSound, 0.4F, 1.0F + (player.worldObj.rand.nextFloat() - 0.5F) * 0.4F);
     }
 
     @Override

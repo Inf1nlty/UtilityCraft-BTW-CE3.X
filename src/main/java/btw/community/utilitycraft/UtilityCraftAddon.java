@@ -9,14 +9,20 @@ import com.inf1nlty.utilitycraft.init.UCRecipes;
 import com.inf1nlty.utilitycraft.item.UCItems;
 import com.inf1nlty.utilitycraft.network.ColoredCementCtrlNet;
 import com.inf1nlty.utilitycraft.network.SteelLockerNet;
-import com.inf1nlty.utilitycraft.network.SweepParticleNet;
 
 public class UtilityCraftAddon extends BTWAddon {
 
     public static final AddonSoundRegistryEntry[] SWEEP_ATTACK_SOUNDS = new AddonSoundRegistryEntry[7];
     static {
         for (int i = 0; i < 7; i++) {
-            SWEEP_ATTACK_SOUNDS[i] = new AddonSoundRegistryEntry("utilitycraft:attack.sweep" + (i + 1));
+            SWEEP_ATTACK_SOUNDS[i] = new AddonSoundRegistryEntry("utilitycraft:weapon.sweep" + (i + 1));
+        }
+    }
+
+    public static final AddonSoundRegistryEntry[] RAPIER_ATTACK_SOUNDS = new AddonSoundRegistryEntry[4];
+    static {
+        for (int i = 0; i < 4; i++) {
+            RAPIER_ATTACK_SOUNDS[i] = new AddonSoundRegistryEntry("utilitycraft:weapon.rapier" + (i + 1));
         }
     }
 
@@ -30,6 +36,5 @@ public class UtilityCraftAddon extends BTWAddon {
 
         SteelLockerNet.register(this);
         ColoredCementCtrlNet.register(this);
-        SweepParticleNet.register(this);
     }
 }

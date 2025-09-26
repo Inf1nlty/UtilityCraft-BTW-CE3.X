@@ -14,6 +14,7 @@
   ],
   "client": [
     "MinecraftMixin",
+    "client.BTWEffectManagerMixin",
     "client.NetClientHandlerMixin",
     "client.render.ChestItemRenderHelperMixin",
     "client.render.PrimitiveAABBWithBenefitsMixin",
@@ -22,5 +23,6 @@
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  },
+  "plugin": "com.inf1nlty.utilitycraft.util.UCCompatMixinPlugin"
 }

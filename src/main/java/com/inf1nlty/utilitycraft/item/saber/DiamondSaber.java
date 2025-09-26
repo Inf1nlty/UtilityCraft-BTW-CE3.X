@@ -14,7 +14,7 @@ public class DiamondSaber extends ItemSaber implements ISweepAttack {
 
     @Override
     public float getDamage() {
-        return 5;
+        return 6;
     }
 
     @Override
