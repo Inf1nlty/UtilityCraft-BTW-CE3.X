@@ -5,10 +5,10 @@ item.iron_saber.name=铁军刀
 item.diamond_saber.name=钻石军刀
 item.soulforged_steel_saber.name=熔魂钢军刀
 
-item.golden_rapier.name=金迅捷剑
-item.iron_rapier.name=铁迅捷剑
-item.diamond_rapier.name=钻石迅捷剑
-item.soulforged_steel_rapier.name=熔魂钢迅捷剑
+item.golden_rapier.name=金刺剑
+item.iron_rapier.name=铁刺剑
+item.diamond_rapier.name=钻石刺剑
+item.soulforged_steel_rapier.name=熔魂钢刺剑
 
 tile.SteelChest.name=熔魂钢箱子
 
