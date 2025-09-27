@@ -14,7 +14,7 @@ public class SFSRapier extends ItemRapier {
 
     @Override
     public float getDamage() {
-        return 5;
+        return 6.5F;
     }
 
     @Override

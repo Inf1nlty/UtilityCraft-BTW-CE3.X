@@ -14,7 +14,7 @@ public class IronRapier extends ItemRapier {
 
     @Override
     public float getDamage() {
-        return 3.5F;
+        return 4.5F;
     }
 
     @Override
