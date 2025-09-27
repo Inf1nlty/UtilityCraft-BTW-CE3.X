@@ -72,7 +72,7 @@ public class EntitySweepAttackFX extends EntityFX {
             float cameraPitch = renderEntity.rotationPitch;
             GL11.glRotatef(-cameraYaw, 0.0F, 1.0F, 0.0F);
             GL11.glRotatef(cameraPitch, 1.0F, 0.0F, 0.0F);
-            GL11.glTranslatef(0, 0, 1.25F);
+            GL11.glTranslatef(0, -0.75F, 1.25F);
         }
 
         GL11.glDisable(GL11.GL_LIGHTING);
