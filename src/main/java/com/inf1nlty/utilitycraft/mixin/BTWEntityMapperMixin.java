@@ -14,5 +14,4 @@ public class BTWEntityMapperMixin {
     private static void mapCustomEntities(CallbackInfo ci){
         UtilityCraftEntityMapper.createModEntityMappings();
     }
-
 }

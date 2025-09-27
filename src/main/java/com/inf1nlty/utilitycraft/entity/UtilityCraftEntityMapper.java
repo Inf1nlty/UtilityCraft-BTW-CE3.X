@@ -5,6 +5,6 @@ import net.minecraft.src.EntityList;
 public class UtilityCraftEntityMapper {
 
     public static void createModEntityMappings() {
-        EntityList.addMapping(EntityObsidianBoat.class, "ObsidianBoat", 2333, 0x2a233f, 0x666666);
+        EntityList.addMapping(EntityObsidianBoat.class, "ObsidianBoat", 2333);
     }
 }

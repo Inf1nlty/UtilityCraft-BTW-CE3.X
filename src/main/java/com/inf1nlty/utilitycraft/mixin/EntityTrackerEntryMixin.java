@@ -17,7 +17,7 @@ public class EntityTrackerEntryMixin {
     private void utilitycraft$customObsidianBoatPacket(CallbackInfoReturnable<Packet> cir) {
         Entity self = ((EntityTrackerEntry)(Object)this).myEntity;
         if (self instanceof EntityObsidianBoat) {
-            cir.setReturnValue(new Packet23VehicleSpawn(self, 101));
+            cir.setReturnValue(new Packet23VehicleSpawn(self, 110));
         }
     }
 

@@ -50,7 +50,7 @@ public abstract class NetClientHandlerMixin {
 
     @Inject(method = "handleVehicleSpawn", at = @At("HEAD"), cancellable = true)
     private void utilitycraft$handleObsidianBoat(Packet23VehicleSpawn packet, CallbackInfo ci) {
-        if (packet.type == 101) {
+        if (packet.type == 110) {
             double x = (double)packet.xPosition / 32.0D;
             double y = (double)packet.yPosition / 32.0D;
             double z = (double)packet.zPosition / 32.0D;
