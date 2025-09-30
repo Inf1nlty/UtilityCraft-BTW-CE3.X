@@ -24,10 +24,9 @@ public abstract class ItemSaber extends SwordItem implements ISaber, ISweepAttac
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 
         if (attacker instanceof EntityPlayer player) {
-            if (!player.isSprinting()) {
                 onSweepAttack(player, target);
+                stack.damageItem(1, attacker);
                 return true;
-            }
         }
         return super.hitEntity(stack, target, attacker);
     }
