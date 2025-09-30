@@ -57,7 +57,7 @@ public class UCEnchantments extends Enchantment {
                     .level(5)
                     .arcaneScroll()
                     .scrollEnchant(UCEnchantments.sweepingEdge)
-                    .secondaryEmeraldCost(1, 1)
+                    .secondaryEmeraldCost(32, 64)
                     .mandatory()
                     .addToTradeList();
         }
