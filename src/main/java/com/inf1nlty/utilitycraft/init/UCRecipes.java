@@ -81,7 +81,8 @@ public class UCRecipes {
     }
 
     private static void addSoulforgeRecipes() {
-        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4), new Object[]{"SSSS", "SCCS", "SCCS", "SSSS", 'S', UCItems.soulforged_steel_sheet, 'C', new ItemStack(BTWBlocks.chest)});
+        if (!isNightmareModeLoaded()) {
+        RecipeManager.addSoulforgeRecipe(new ItemStack(UCBlocks.steelChest,4), new Object[]{"SSSS", "SCCS", "SCCS", "SSSS", 'S', UCItems.soulforged_steel_sheet, 'C', new ItemStack(BTWBlocks.chest)});}
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_sheet, 8), new Object[] {new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot), new ItemStack(BTWItems.soulforgedSteelIngot)});
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianDecorative, 8, 0), new Object[] {Block.obsidian, Block.obsidian, Block.obsidian, Block.obsidian});
         RecipeManager.addShapelessSoulforgeRecipe(new ItemStack(UCBlocks.obsidianMouldingDecorative, 8, 0), new Object[] {new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0), new ItemStack(UCBlocks.obsidianDecorative, 1, 0)});
@@ -92,5 +93,14 @@ public class UCRecipes {
 //        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {"  S ", "  S ", "  S ", " SH ", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
 //        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {"   S", "   S", "   S", "  SH", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
         RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_rapier, 1), new Object[] {"   S", "  S ", " S  ", "H   ", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
+    }
+
+    private static boolean isNightmareModeLoaded() {
+        try {
+            Class.forName("com.itlesports.nightmaremode.NightmareModeAddon");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
     }
 }
