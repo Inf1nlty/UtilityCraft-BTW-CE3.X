@@ -1,5 +1,6 @@
 package com.inf1nlty.utilitycraft;
 
+import btw.entity.mob.villager.trade.TradeItem;
 import btw.entity.mob.villager.trade.TradeProvider;
 import btw.item.BTWItems;
 import com.inf1nlty.utilitycraft.item.ISweepAttack;
@@ -21,39 +22,45 @@ public class UCEnchantments extends Enchantment {
         sweepingEdge = new UCEnchantments(SWEEPING_EDGE_ID, 2);
         sweepingEdgeScroll = new ItemStack(BTWItems.arcaneScroll, 1, SWEEPING_EDGE_ID);
 
-        EntityVillager.removeCustomTrade(3,
+        boolean nightmareLoaded = false;
+        Class<?> bloodOrbClass = null;
+        try {
+            Class<?> nmItemsClass = Class.forName("com.itlesports.nightmaremode.item.NMItems");
+            nightmareLoaded = true;
+            bloodOrbClass = nmItemsClass;
+        } catch (ClassNotFoundException ignored) {}
+        if (nightmareLoaded) {
+            Item bloodOrb = null;
+            try {
+                bloodOrb = (Item) bloodOrbClass.getField("bloodOrb").get(null);
+            } catch (Exception e) {
+                System.err.println("[UtilityCraft] Failed to get NMItems.bloodOrb for sweeping_edge villager trade!");
+                System.err.println("[UtilityCraft] Exception: " + e);
+            }
+            if (bloodOrb != null) {
                 TradeProvider.getBuilder()
-                        .name("btw:sell_unbreaking_scroll")
+                        .name("ucBlacksmithSweepingEdgeScroll")
                         .profession(3)
                         .level(5)
-                        .arcaneScroll()
-                        .scrollEnchant(Enchantment.unbreaking)
-                        .secondaryEmeraldCost(48, 64)
-                        .mandatory()
-                        .build()
-        );
-
-        TradeProvider.getBuilder()
-                .name("btw:sell_unbreaking_scroll")
-                .profession(3)
-                .level(5)
-                .arcaneScroll()
-                .scrollEnchant(Enchantment.unbreaking)
-                .secondaryEmeraldCost(48, 64)
-                .mandatory()
-                .condition(villager -> villager.getRNG().nextFloat() < 0.5f)
-                .addToTradeList();
-
-        TradeProvider.getBuilder()
-                .name("ucBlacksmithSweepingEdgeScroll")
-                .profession(3)
-                .level(5)
-                .arcaneScroll()
-                .scrollEnchant(UCEnchantments.sweepingEdge)
-                .secondaryEmeraldCost(32, 64)
-                .mandatory()
-                .condition(villager -> villager.getRNG().nextFloat() >= 0.5f)
-                .addToTradeList();
+                        .convert()
+                        .input(TradeItem.fromID(Item.paper.itemID))
+                        .secondInput(TradeItem.fromID(bloodOrb.itemID, 24, 32))
+                        .output(TradeItem.fromIDAndMetadata(BTWItems.arcaneScroll.itemID, SWEEPING_EDGE_ID))
+                        .weight(1.0f)
+                        .addToTradeList();
+            }
+        }
+        else {
+            TradeProvider.getBuilder()
+                    .name("ucBlacksmithSweepingEdgeScroll")
+                    .profession(3)
+                    .level(5)
+                    .arcaneScroll()
+                    .scrollEnchant(UCEnchantments.sweepingEdge)
+                    .secondaryEmeraldCost(1, 1)
+                    .mandatory()
+                    .addToTradeList();
+        }
     }
 
     @Override

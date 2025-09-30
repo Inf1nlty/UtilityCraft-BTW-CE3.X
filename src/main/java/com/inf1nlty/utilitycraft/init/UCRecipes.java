@@ -77,7 +77,7 @@ public class UCRecipes {
         RecipeManager.addStokedCrucibleRecipe(new ItemStack(Item.goldNugget, 24), new ItemStack[]{new ItemStack(UCItems.golden_rapier, 1, Short.MAX_VALUE)});
         RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.ironNugget, 24), new ItemStack[]{new ItemStack(UCItems.iron_rapier, 1, Short.MAX_VALUE)});
         RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.diamondIngot, 4), new ItemStack[]{new ItemStack(UCItems.diamond_rapier, 1, Short.MAX_VALUE)});
-        RecipeManager.addStokedCrucibleRecipe(new ItemStack(UCItems.soulforged_steel_sheet, 3), new ItemStack[]{new ItemStack(UCItems.soulforged_steel_rapier, 1, Short.MAX_VALUE)});
+        RecipeManager.addStokedCrucibleRecipe(new ItemStack(BTWItems.soulforgedSteelIngot, 3), new ItemStack[]{new ItemStack(UCItems.soulforged_steel_rapier, 1, Short.MAX_VALUE)});
     }
 
     private static void addSoulforgeRecipes() {
@@ -91,6 +91,6 @@ public class UCRecipes {
 //        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {" S  ", " S  ", " S  ", "SH  ", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
 //        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {"  S ", "  S ", "  S ", " SH ", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
 //        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_saber, 1), new Object[] {"   S", "   S", "   S", "  SH", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
-        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_rapier, 1), new Object[] {"   S", "  S ", " S  ", "H   ", 'S', new ItemStack(UCItems.soulforged_steel_sheet, 1, 0), 'H', BTWItems.haft});
+        RecipeManager.addSoulforgeRecipe(new ItemStack(UCItems.soulforged_steel_rapier, 1), new Object[] {"   S", "  S ", " S  ", "H   ", 'S', new ItemStack(BTWItems.soulforgedSteelIngot, 1, 0), 'H', BTWItems.haft});
     }
 }
