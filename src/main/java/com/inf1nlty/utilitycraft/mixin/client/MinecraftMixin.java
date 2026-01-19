@@ -1,4 +1,4 @@
-package com.inf1nlty.utilitycraft.mixin;
+package com.inf1nlty.utilitycraft.mixin.client;
 
 import com.inf1nlty.utilitycraft.network.ColoredCementCtrlNet;
 import net.minecraft.src.*;

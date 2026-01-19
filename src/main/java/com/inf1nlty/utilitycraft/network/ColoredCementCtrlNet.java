@@ -1,6 +1,6 @@
 package com.inf1nlty.utilitycraft.network;
 
-import btw.BTWAddon;
+import api.BTWAddon;
 import net.minecraft.src.*;
 
 import java.io.*;

@@ -1,4 +1,4 @@
-package com.inf1nlty.utilitycraft.mixin.entity;
+package com.inf1nlty.utilitycraft.mixin.world.entity;
 
 import com.inf1nlty.utilitycraft.item.rapier.IRapier;
 import net.minecraft.src.DamageSource;

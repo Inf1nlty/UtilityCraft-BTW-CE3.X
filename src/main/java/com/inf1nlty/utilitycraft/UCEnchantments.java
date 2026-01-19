@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft;
 
-import btw.entity.mob.villager.trade.TradeItem;
-import btw.entity.mob.villager.trade.TradeProvider;
+import api.entity.mob.villager.TradeItem;
+import api.entity.mob.villager.TradeProvider;
 import btw.item.BTWItems;
 import com.inf1nlty.utilitycraft.item.ISweepAttack;
 import net.minecraft.src.*;

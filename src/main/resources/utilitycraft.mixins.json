@@ -4,16 +4,17 @@
   "package": "com.inf1nlty.utilitycraft.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BTWEntityMapperMixin",
-    "EntityBoatMixin",
-    "EntityPlayerMixin",
-    "EntityTrackerEntryMixin",
+    "world.entity.BTWEntityMapperMixin",
+    "world.entity.EntityBoatMixin",
+    "world.entity.EntityPlayerMixin",
+    "world.entity.EntityTrackerEntryMixin",
     "client.render.EffectRendererMixin",
-    "entity.EntityLivingBaseMixin",
+    "world.entity.EntityLivingBaseMixin",
+    "world.entity.EntityPlayerHitMixin",
     "world.item.ItemSwordMixin"
   ],
   "client": [
-    "MinecraftMixin",
+    "client.MinecraftMixin",
     "client.BTWEffectManagerMixin",
     "client.NetClientHandlerMixin",
     "client.render.ChestItemRenderHelperMixin",

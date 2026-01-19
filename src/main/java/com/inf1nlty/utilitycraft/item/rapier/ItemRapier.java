@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft.item.rapier;
 
+import api.item.items.SwordItem;
 import btw.community.utilitycraft.UtilityCraftAddon;
-import btw.item.items.SwordItem;
 import net.minecraft.src.*;
 import org.lwjgl.input.Keyboard;
 

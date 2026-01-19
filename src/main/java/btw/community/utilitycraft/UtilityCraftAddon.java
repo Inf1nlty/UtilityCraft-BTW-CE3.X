@@ -1,8 +1,9 @@
 package btw.community.utilitycraft;
 
-import btw.BTWAddon;
-import btw.AddonHandler;
-import btw.util.sounds.AddonSoundRegistryEntry;
+
+import api.AddonHandler;
+import api.BTWAddon;
+import api.util.AddonSoundRegistryEntry;
 import com.inf1nlty.utilitycraft.UCEnchantments;
 import com.inf1nlty.utilitycraft.block.UCBlocks;
 import com.inf1nlty.utilitycraft.init.UCRecipes;

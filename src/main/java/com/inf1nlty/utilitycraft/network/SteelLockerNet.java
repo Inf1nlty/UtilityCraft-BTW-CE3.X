@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft.network;
 
-import btw.BTWAddon;
-import btw.network.packet.handler.CustomPacketHandler;
+import api.BTWAddon;
+import api.network.CustomPacketHandler;
 import com.inf1nlty.utilitycraft.block.tileentity.TileEntitySteelChest;
 import com.inf1nlty.utilitycraft.inventory.ContainerSteelChest;
 import net.minecraft.src.*;

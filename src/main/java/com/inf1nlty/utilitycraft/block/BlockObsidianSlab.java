@@ -1,6 +1,6 @@
 package com.inf1nlty.utilitycraft.block;
 
-import btw.block.blocks.SlabBlock;
+import api.block.blocks.SlabBlock;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.IBlockAccess;
 import net.minecraft.src.Material;

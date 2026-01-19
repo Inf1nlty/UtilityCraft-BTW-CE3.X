@@ -1,4 +1,4 @@
-package com.inf1nlty.utilitycraft.mixin;
+package com.inf1nlty.utilitycraft.mixin.world.entity;
 
 import btw.entity.util.BTWEntityMapper;
 import com.inf1nlty.utilitycraft.entity.UtilityCraftEntityMapper;

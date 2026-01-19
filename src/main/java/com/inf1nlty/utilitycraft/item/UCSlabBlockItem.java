@@ -1,6 +1,7 @@
 package com.inf1nlty.utilitycraft.item;
 
-import btw.item.blockitems.SlabBlockItem;
+
+import api.item.blockitems.SlabBlockItem;
 
 public class UCSlabBlockItem extends SlabBlockItem {
 

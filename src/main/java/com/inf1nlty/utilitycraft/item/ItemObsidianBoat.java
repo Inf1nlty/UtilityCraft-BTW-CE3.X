@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft.item;
 
 import com.inf1nlty.utilitycraft.entity.EntityObsidianBoat;
-import btw.world.util.BlockPos;
+import api.world.BlockPos;
 import net.minecraft.src.*;
 
 import java.util.List;

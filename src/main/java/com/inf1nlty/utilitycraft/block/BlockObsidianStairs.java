@@ -1,6 +1,6 @@
 package com.inf1nlty.utilitycraft.block;
 
-import btw.block.blocks.StairsBlock;
+import api.block.blocks.StairsBlock;
 import net.minecraft.src.Block;
 import net.minecraft.src.IBlockAccess;
 

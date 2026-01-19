@@ -1,12 +1,12 @@
 package com.inf1nlty.utilitycraft.mixin.client;
 
+import api.client.EffectHandler;
 import com.inf1nlty.utilitycraft.client.ParticleHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import btw.client.fx.BTWEffectManager;
-import btw.client.fx.EffectHandler;
 
 @Mixin(value = BTWEffectManager.class, remap = false)
 public abstract class BTWEffectManagerMixin {

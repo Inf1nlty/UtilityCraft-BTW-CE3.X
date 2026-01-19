@@ -1,9 +1,9 @@
 package com.inf1nlty.utilitycraft.entity;
 
+import api.inventory.InventoryUtils;
+import api.item.items.PickaxeItem;
 import btw.block.blocks.BlockDispenserBlock;
 import btw.block.tileentity.dispenser.BlockDispenserTileEntity;
-import btw.inventory.util.InventoryUtils;
-import btw.item.items.PickaxeItem;
 import com.inf1nlty.utilitycraft.item.UCItems;
 import net.minecraft.src.*;
 

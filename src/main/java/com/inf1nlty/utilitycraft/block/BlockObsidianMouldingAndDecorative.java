@@ -1,6 +1,6 @@
 package com.inf1nlty.utilitycraft.block;
 
-import btw.block.blocks.MouldingAndDecorativeBlock;
+import api.block.blocks.MouldingAndDecorativeBlock;
 import net.minecraft.src.Block;
 import net.minecraft.src.IBlockAccess;
 import net.minecraft.src.Material;

@@ -1,7 +1,7 @@
 package com.inf1nlty.utilitycraft.item.saber;
 
+import api.item.items.SwordItem;
 import btw.community.utilitycraft.UtilityCraftAddon;
-import btw.item.items.SwordItem;
 import com.inf1nlty.utilitycraft.UCEnchantments;
 import com.inf1nlty.utilitycraft.item.ISweepAttack;
 import com.inf1nlty.utilitycraft.util.UCDamageUtils;

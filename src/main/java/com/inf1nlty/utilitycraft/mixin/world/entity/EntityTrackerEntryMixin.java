@@ -1,4 +1,4 @@
-package com.inf1nlty.utilitycraft.mixin;
+package com.inf1nlty.utilitycraft.mixin.world.entity;
 
 import com.inf1nlty.utilitycraft.entity.EntityObsidianBoat;
 import net.minecraft.src.EntityTrackerEntry;

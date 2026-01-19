@@ -1,8 +1,8 @@
 package com.inf1nlty.utilitycraft.mixin.client.render;
 
+import api.util.PrimitiveAABBWithBenefits;
 import btw.block.model.BucketModel;
 import com.inf1nlty.utilitycraft.block.BlockBucketBlockColoredCement;
-import btw.util.PrimitiveAABBWithBenefits;
 import com.inf1nlty.utilitycraft.client.render.ClientRenderHelper;
 import net.minecraft.src.Block;
 import net.minecraft.src.RenderBlocks;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PrimitiveAABBWithBenefits.class)
 public abstract class PrimitiveAABBWithBenefitsMixin {
 
-    @Shadow
+    @Shadow( remap = false)
     public abstract int getAssemblyID();
 
     @Inject(method = "renderAsBlock", at = @At("HEAD"))
